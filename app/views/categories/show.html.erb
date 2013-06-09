@@ -1,0 +1,5 @@
+<% lol = @categories.find(params[:cat]) %>
+
+<% lol.each do |l| %>
+	<%= l.name %>
+<% end %>
