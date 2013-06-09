@@ -7,27 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
 <header class="container_5 clearfix">
-	<nav class="grid_5">
-		<ul>
-			<li><a href="http://jerkface.bigcartel.com/" class="white">Store</a></li>
-      <!--li><a href="/contact" class="orange">Contact</a></li-->
-      <li><%= link_to 'Contact',   static_contact_path %></li>
-
-      <% @categories.each do |category| %>
-
-      <li><%= link_to category.name,   categories_show_path(:cat => category.id) %></li>
-
-      <% end %>
-
-			<!--li><a href="/digital" class="blue">Digital</a></li>
-			<li><a href="/graphic" class="green">Graphic</a></li>
-			<li><a href="/small" class="red">Small</a></li>
-			<li><a href="/painting" class="yellow">Painting</a></li-->
-      <li><%= link_to 'Home',   static_home_path %></li>
-		</ul>
-	</nav>
+  <nav class="grid_5">
+    <ul>
+      <li><a href="http://jerkface.bigcartel.com/" class="white">Store</a></li>
+      <li><%= link_to 'Contact', contact_path %></li>
+    </ul>
+  </nav>
 </header>
 
 <div role="main" class="container_5 clearfix">
@@ -47,6 +33,16 @@
   })();
 
 </script-->
+
+<footer class="container_5 clearfix">
+  <nav class="grid_5">
+    <ul>
+      <li><%= link_to 'Artwork', artworks_path %></li>
+      <li><%= link_to 'Categories', categories_path %></li>
+      <li><%= link_to 'Home', "/" %></li>
+    </ul>
+  </nav>
+</footer>
 
 </body>
 </html>

@@ -2,6 +2,10 @@
 
 one:
   name: MyString
+  colour: MyString
+  hidden: false
 
 two:
   name: MyString
+  colour: MyString
+  hidden: false

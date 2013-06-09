@@ -1,5 +1,17 @@
-<% lol = @categories.find(params[:cat]) %>
+<p id="notice"><%= notice %></p>
 
-<% lol.each do |l| %>
-	<%= l.name %>
-<% end %>
+<p>
+  <b>Name:</b>
+  <%= @category.name %>
+</p>
+
+<p>
+  <b>Colour:</b>
+  <%= @category.colour %>
+</p>
+
+<p>
+  <b>Hidden:</b>
+  <%= @category.hidden %>
+</p>
+

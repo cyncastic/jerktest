@@ -11,10 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130608232300) do
+ActiveRecord::Schema.define(:version => 20130609032104) do
+
+  create_table "artworks", :force => true do |t|
+    t.string   "title"
+    t.string   "medium"
+    t.integer  "length"
+    t.integer  "width"
+    t.integer  "year"
+    t.string   "img_url"
+    t.string   "thumb_url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name"
+    t.string   "colour"
+    t.boolean  "hidden"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

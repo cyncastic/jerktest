@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @artwork.title %>
+</p>
+
+<p>
+  <b>Medium:</b>
+  <%= @artwork.medium %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @artwork.length %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @artwork.width %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @artwork.year %>
+</p>
+
+<p>
+  <b>Img url:</b>
+  <%= @artwork.img_url %>
+</p>
+
+<p>
+  <b>Thumb url:</b>
+  <%= @artwork.thumb_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_artwork_path(@artwork) %> |
+<%= link_to 'Back', artworks_path %>
