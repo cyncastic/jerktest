@@ -3,6 +3,7 @@ class ArtworksController < ApplicationController
   # GET /artworks.json
   def index
     @artworks = Artwork.all
+    @categories = Category.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +15,7 @@ class ArtworksController < ApplicationController
   # GET /artworks/1.json
   def show
     @artwork = Artwork.find(params[:id])
+    @categories = Category.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +27,7 @@ class ArtworksController < ApplicationController
   # GET /artworks/new.json
   def new
     @artwork = Artwork.new
+    @categories = Category.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +38,7 @@ class ArtworksController < ApplicationController
   # GET /artworks/1/edit
   def edit
     @artwork = Artwork.find(params[:id])
+    @categories = Category.all
   end
 
   # POST /artworks

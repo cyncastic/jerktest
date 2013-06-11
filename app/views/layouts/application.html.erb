@@ -11,12 +11,15 @@
   <nav class="grid_5">
     <ul>
       <li><a href="http://jerkface.bigcartel.com/" class="white">Store</a></li>
+      <%= render '/categories/categories', :collection => @categories %>
       <li><%= link_to 'Contact', contact_path %></li>
     </ul>
   </nav>
 </header>
 
 <div role="main" class="container_5 clearfix">
+
+
 
 <%= yield %>
 

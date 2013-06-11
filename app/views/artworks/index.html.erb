@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Title</th>
+    <th>Category</th>
     <th>Medium</th>
     <th>Length</th>
     <th>Width</th>
@@ -17,6 +18,7 @@
 <% @artworks.each do |artwork| %>
   <tr>
     <td><%= artwork.title %></td>
+    <td><%= artwork.category.name %></td>
     <td><%= artwork.medium %></td>
     <td><%= artwork.length %></td>
     <td><%= artwork.width %></td>
