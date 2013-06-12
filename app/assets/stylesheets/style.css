@@ -70,59 +70,39 @@ td { vertical-align: top; }
 
 
 
+
+
+
 /* ===== Primary Styles ========================================================
-   Author: John Devin Moran
+   Author: Devin McKay
    ========================================================================== */
 
 body{ background: #000; font-family: 'Pontano Sans', sans-serif;}
 
-nav, nav ul {display: inline;}
-nav li{float: right; margin-right: 17px; margin-top: 25px;}
+nav li{float: right;  margin: 25px 0 0 10px;}
 nav, nav ul li a { text-decoration: none; text-align: right; color: #ddd; font-size: 14pt; font-family: 'Pontano Sans', sans-serif; text-transform: lowercase;}
 nav, nav ul li a:active { color: #ccc;}
 nav, nav ul li a:visited { color: #ccc;}
-/*nav, nav ul li a:hover { color: #f895b8;}*/
 
-nav, nav ul li a.red-over { color: #f24b95;}
-nav, nav ul li a.yellow-over { color: #f3e823;}
-nav, nav ul li a.blue-over { color: #54cdd8;}
-nav, nav ul li a.green-over { color: #cfdf4a;}
-nav, nav ul li a.pink-over { color: #f895b8;}
-nav, nav ul li a.white-over { color: #fff;}
-nav, nav ul li a.orange-over { color: #ff8913;}
-
-nav, nav ul li a.red:hover { color: #f24b95;}
-nav, nav ul li a.yellow:hover { color: #f3e823;}
-nav, nav ul li a.blue:hover { color: #54cdd8;}
-nav, nav ul li a.green:hover { color: #cfdf4a;}
-nav, nav ul li a.pink:hover { color: #f895b8;}
-nav, nav ul li a.white:hover { color: #fff;}
-nav, nav ul li a.orange:hover { color: #ff8913;}
 
 header{margin-top: 0;margin-bottom: 10px; height: 50px; background: url('/assets/header.png') no-repeat;}
-header h1{ font-size: 0; margin: 0; padding: 0; color: #333;}
+header h1{ font-size: 0; margin: 0; padding: 0;}
 
-div[role="main"]{}
-div[role="main"] ul{ display: inline; list-style: none;background: #eee; margin: 0; padding: 0;}
+div[role="main"] ul{ display: inline; list-style: none; margin: 0; padding: 0;}
 div[role="main"] ul li{ height: 180px;  margin-bottom: 10px;}
 
 ul#images{ display: inline; list-style: none; background: aqua;}
 
 .fancy img{ position: relative; z-index: -1;}
-
 .fancy{
 	box-shadow: inset 0 0 0 #000;
-	-moz-box-shadow: inset 0 0 0 #000;
-	-webkit-box-shadow: inset 0 0 0 #000;
-    width: 180px;
-    height: 180px;
-    display: block;
-    overflow: hidden;
-    position: relative;
+  width: 180px; height: 180px;
+  display: block;
+  overflow: hidden;
+  position: relative;
 }
 
-.right-align{text-align: right;}
-.contact{}
+
 
 #contact-logo{ position: relative; top:50px; left: 30px;}
 #contact-text{ color: #ddd; font-size: 12pt; margin: 0; padding: 160px 0 0 0;}
@@ -140,15 +120,45 @@ a#instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
 
 .fancybox-title span { font-family: 'Pontano Sans', sans-serif; }
 
-footer p.copyright{margin: 0; padding: 0; text-align: right; font-size: 10pt; color: gray; font-family: 'Dosis', sans-serif;}
-footer p.contact{margin: 0; padding: 0; text-align: left; font-size: 10pt; color: gray; font-family: 'Dosis', sans-serif;}
 
-.pinkback{background-color: #ec1a69;}
 
-footer p.contact a { text-decoration: none; color: gray; font-family: 'Pontano Sans', sans-serif;}
-footer p.contact a:active { color: gray;}
-footer p.contact a:visited { color: gray;}
-footer p.contact a:hover { color: #333;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =============================================================================
    Media Queries

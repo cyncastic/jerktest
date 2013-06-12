@@ -1,16 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<h1><%= @category.name %></h1>
-
+<ul id="images">
 <% @artworks.each do |artwork| %>
-  <tr>
-    <td><%= artwork.title %></td>
-    <td><%= artwork.category.name %></td>
-    <td><%= artwork.medium %></td>
-    <td><%= artwork.length %></td>
-    <td><%= artwork.width %></td>
-    <td><%= artwork.year %></td>
-    <td><%= artwork.img_url %></td>
-    <td><%= artwork.thumb_url %></td>
-  </tr>
+    <li class="grid_1">
+        <a class="fancy" rel="group1" title="<%= artwork.title %>" href="<%= artwork.img_url %>"><img src="<%= artwork.thumb_url %>" /></a>
+    </li>
 <% end %>
+</ul>
