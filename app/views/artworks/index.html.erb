@@ -5,11 +5,10 @@
     <th>Title</th>
     <th>Category</th>
     <th>Medium</th>
-    <th>Length</th>
-    <th>Width</th>
+    <th>Dimensions</th>
     <th>Year</th>
     <th>Img url</th>
-    <th>Thumb url</th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -20,11 +19,9 @@
     <td><%= artwork.title %></td>
     <td><%= artwork.category.name %></td>
     <td><%= artwork.medium %></td>
-    <td><%= artwork.length %></td>
-    <td><%= artwork.width %></td>
+    <td><%= artwork.length %> x <%= artwork.width %></td>
     <td><%= artwork.year %></td>
     <td><%= artwork.img_url %></td>
-    <td><%= artwork.thumb_url %></td>
     <td><%= link_to 'Show', artwork %></td>
     <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
     <td><%= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>
