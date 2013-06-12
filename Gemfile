@@ -13,10 +13,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   gem "fog"
-  gem "carrierwave"
 end
 
 gem 'jquery-rails'
+gem "carrierwave"
 
 group :production do 
   gem 'pg', '0.12.2'

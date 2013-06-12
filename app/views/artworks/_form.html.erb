@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :length %><br />
-    <%= f.number_field :length %>
+    <%= f.number_field :length, :size => 3 %>
   </div>
   <div class="field">
     <%= f.label :width %><br />
@@ -33,15 +33,15 @@
   </div>
   <div class="field">
     <%= f.label :year %><br />
-    <%= f.number_field :year %>
+    <%= f.select :year, (2010..Time.now.year).to_a %>
   </div>
   <div class="field">
     <%= f.label :img_url %><br />
-    <%= f.text_field :img_url %>
+    <%= f.file_field :img_url %>
   </div>
   <div class="field">
     <%= f.label :thumb_url %><br />
-    <%= f.text_field :thumb_url %>
+    <%= f.file_field :thumb_url %>
   </div>
   <div class="actions">
     <%= f.submit %>
