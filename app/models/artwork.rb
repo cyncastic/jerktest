@@ -1,5 +1,5 @@
 class Artwork < ActiveRecord::Base
-  attr_accessible :img_url, :length, :medium, :thumb_url, :title, :width, :year, :category_id
+  attr_accessible :img_url, :length, :medium, :title, :width, :year, :category_id
 
   mount_uploader :img_url, UpjerkUploader
 

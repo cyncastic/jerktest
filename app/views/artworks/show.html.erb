@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @artwork.img_url_url(:thumb).to_s %>
+
 <p>
   <b>Title:</b>
   <%= @artwork.title %>
@@ -11,13 +13,8 @@
 </p>
 
 <p>
-  <b>Length:</b>
-  <%= @artwork.length %>
-</p>
-
-<p>
-  <b>Width:</b>
-  <%= @artwork.width %>
+  <b>Dimensions:</b>
+  <%= @artwork.length %> x <%= @artwork.width %>
 </p>
 
 <p>
@@ -28,11 +25,6 @@
 <p>
   <b>Img url:</b>
   <%= @artwork.img_url %>
-</p>
-
-<p>
-  <b>Thumb url:</b>
-  <%= @artwork.thumb_url %>
 </p>
 
 
