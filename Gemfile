@@ -11,12 +11,12 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem "fog"
 end
 
 gem 'jquery-rails'
-
 gem "carrierwave"
-gem "rmagick", :require => 'RMagick'
 
 group :production do 
   gem 'pg', '0.12.2'

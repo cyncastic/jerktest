@@ -99,12 +99,18 @@ td { vertical-align: top; }
 
 
 
+
+/* ===== Primary Styles ========================================================
+   Author: Devin McKay
+   ========================================================================== */
+
 body{ background: #000; font-family: 'Pontano Sans', sans-serif;}
 
 #main-navigation li{float: right;  margin: 25px 0 0 10px;}
 #main-navigation ul li a { text-decoration: none; text-align: right; color: #ddd; font-size: 14pt; text-transform: lowercase;}
 #main-navigation ul li a:active { color: #ccc;}
 #main-navigation ul li a:visited { color: #ccc;}
+
 
 header{margin-top: 0;margin-bottom: 10px; height: 50px; background: url('/assets/header.png') no-repeat;}
 header h1{ font-size: 0; margin: 0; padding: 0;}
@@ -116,12 +122,14 @@ ul#images{ display: inline; list-style: none;}
 
 .fancy img{ position: relative; z-index: -1;}
 .fancy{
-	box-shadow: inset 0 0 0 #000;
+	box-shadow: inset 0 0 95px #fff;
   width: 180px; height: 180px;
   display: block;
   overflow: hidden;
   position: relative;
 }
+
+
 
 #contact-logo{ position: relative; top:50px; left: 30px;}
 #contact-text{ color: #ddd; font-size: 12pt; margin: 0; padding: 160px 0 0 0;}
@@ -142,12 +150,9 @@ a#instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
 
 footer{
   display: block;
-  width: 200px;
-  position: fixed; top: 0; left: -180px;
+  position: fixed; top: 0; left: 0;
 
-  background: url('/assets/arrow.png') #9aa no-repeat center right;
-  
-  border: #663 2px solid;
+  background-color: #222;
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
 }
