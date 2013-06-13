@@ -41,12 +41,12 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     erubis (2.7.0)
-    excon (0.23.0)
+    excon (0.24.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    fog (1.12.1)
+    fog (1.10.1)
       builder
-      excon (~> 0.23.0)
+      excon (~> 0.20)
       formatador (~> 0.2.0)
       mime-types
       multi_json (~> 1.0)
@@ -127,7 +127,7 @@ PLATFORMS
 DEPENDENCIES
   carrierwave
   coffee-rails (~> 3.2.1)
-  fog
+  fog (~> 1.10.1)
   jquery-rails
   pg (= 0.12.2)
   rails (= 3.2.13)
