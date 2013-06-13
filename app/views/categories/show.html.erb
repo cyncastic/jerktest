@@ -1,7 +1,7 @@
 <ul id="images">
 <% @artworks.each do |artwork| %>
     <li class="grid_1">
-        <a class="fancy" rel="group1" title="<%= artwork.title %>" href="<%= artwork.img_url %>"><img src="<%= artwork.thumb_url %>" /></a>
+        <a class="fancy" rel="group1" title="<%= artwork.title %>" href="<%= artwork.img_url %>"><%= image_tag artwork.img_url_url(:thumb).to_s %></a>
     </li>
 <% end %>
 </ul>

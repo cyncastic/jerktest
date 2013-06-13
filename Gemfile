@@ -18,6 +18,8 @@ end
 gem 'jquery-rails'
 gem "carrierwave"
 
+gem 'rmagick', '2.13.2'
+
 group :production do 
   gem 'pg', '0.12.2'
 end
