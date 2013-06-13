@@ -141,20 +141,18 @@ a#instagram, a#facebook{ position: absolute; top: 136px; height: 45px; width: 45
 a#facebook{  background: url('/assets/contact/facebook.png'); left: 136px;}
 a#instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
 
-
 .fancybox-title span { font-family: 'Pontano Sans', sans-serif; }
-
-
-
 
 footer{
   display: block;
   width: 200px;
-  position: fixed; top: 0; left: -180px;
+  position: fixed; top: 10px; left: -180px;
 
   background: url('/assets/arrow.png') #414 no-repeat center right;
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 50px;
+
+  border: 3px #141 solid; border-left: none;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
 }
 footer ul{
   margin:0; padding:0 20px 0 10px;
