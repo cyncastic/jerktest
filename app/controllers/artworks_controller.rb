@@ -14,8 +14,8 @@ class ArtworksController < ApplicationController
   # GET /artworks/1
   # GET /artworks/1.json
   def show
-    @artwork = Artwork.find(params[:id])
     @categories = Category.all
+    @artwork = Artwork.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
