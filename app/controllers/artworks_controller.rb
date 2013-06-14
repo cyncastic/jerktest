@@ -45,6 +45,7 @@ class ArtworksController < ApplicationController
   # POST /artworks.json
   def create
     @artwork = Artwork.new(params[:artwork])
+    @categories = Category.all
 
     respond_to do |format|
       if @artwork.save
@@ -61,6 +62,7 @@ class ArtworksController < ApplicationController
   # PUT /artworks/1.json
   def update
     @artwork = Artwork.find(params[:id])
+    @categories = Category.all
 
     respond_to do |format|
       if @artwork.update_attributes(params[:artwork])

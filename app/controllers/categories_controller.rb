@@ -44,6 +44,7 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
+    @categories = Category.all
     @category = Category.new(params[:category])
 
     respond_to do |format|

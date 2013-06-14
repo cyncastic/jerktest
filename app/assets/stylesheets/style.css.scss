@@ -112,8 +112,8 @@ body{ background: #000; font-family: 'Pontano Sans', sans-serif;}
 header{margin-top: 0;margin-bottom: 10px; height: 50px; background: url('/assets/header.png') no-repeat;}
 header h1{ font-size: 0; margin: 0; padding: 0;}
 
-div[role="main"] ul{ margin: 0; padding: 0;}
-div[role="main"] ul li{ height: 180px;  margin-bottom: 10px;}
+ul#images{ margin: 0; padding: 0;}
+ul#images li{ height: 180px;  margin-bottom: 10px;}
 
 ul#images{ display: inline; list-style: none;}
 
@@ -143,6 +143,11 @@ a#instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
 
 .fancybox-title span { font-family: 'Pontano Sans', sans-serif; }
 
+
+
+
+
+
 footer{
   display: block;
   width: 200px;
@@ -158,7 +163,7 @@ footer ul{
   margin:0; padding:0 20px 0 10px;
   list-style: none;
 }
-footer ul li{ font-size: 2em; margin: .9em 0;}
+footer ul li{ font-size: 1em; margin: .9em 0 .9em .9em;}
 
 
 
