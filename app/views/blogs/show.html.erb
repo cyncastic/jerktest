@@ -1,20 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @blog.title %>
-</p>
+<article class="container_5 clearfix post">
+	<header class="grid_5">
+	    <h1><%= @blog.title %></h1>
+	    <p>Submited by <a>Jerk</a></p>
+	    <time><%= @blog.created_at.strftime("%d %b. %Y") %></time>
+    </header>
+    <p class="grid_5"><%= @blog.post %></p>
+    <footer class="grid_5">
+	    <ul>
+	    	<li>Post to Facebook</li>
+	    	<li>Post to Twitter</li>
+	    </ul>
+	</footer>
+</article>
 
-<p>
-  <b>Post:</b>
-  <%= @blog.post %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @blog.image %>
-</p>
-
-
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<%= link_to 'Edit', edit_blog_path(@blog), :class => "push_4 grid_1 btn" %>
