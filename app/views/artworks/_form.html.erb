@@ -2,7 +2,6 @@
   <% if @artwork.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@artwork.errors.count, "error") %> prohibited this artwork from being saved:</h2>
-
       <ul>
       <% @artwork.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -12,34 +11,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.label :category_id, :class => "grid_1 alpha" %>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {:prompt=>true}, { :class => "grid_1 omega" }) %>
   </div>
   <div class="field">
-    <%= f.label :category_id %>
-    <%= f.collection_select(:category_id, Category.all, :id, :name) %>
+    <%= f.label :title, :class => "grid_1 alpha" %>
+    <%= f.text_field :title, :class => "grid_4 omega" %>
   </div>
   <div class="field">
-    <%= f.label :medium %>
-    <%= f.text_field :medium %>
+    <%= f.label :medium, :class => "grid_1 alpha" %>
+    <%= f.text_field :medium, :class => "grid_4 omega" %>
   </div>
   <div class="field">
-    <%= f.label :length %>
-    <%= f.number_field :length, :size => 3 %>
+    <%= f.label :length, :class => "grid_1 alpha" %>
+    <%= f.number_field :length, :class => "grid_1 omega" %>
   </div>
   <div class="field">
-    <%= f.label :width %>
-    <%= f.number_field :width %>
+    <%= f.label :width, :class => "grid_1 alpha" %>
+    <%= f.number_field :width, :class => "grid_1 omega" %>
   </div>
   <div class="field">
-    <%= f.label :year %>
-    <%= f.select :year, (2010..Time.now.year).to_a %>
+    <%= f.label :year, :class => "grid_1 alpha" %>
+    <%= f.select :year, (2010..Time.now.year).to_a, {:prompt=>true}, {:class => "grid_1 omega"} %>
   </div>
   <div class="field">
-    <%= f.label :img_url %>
-    <%= f.file_field :img_url %>
+    <%= f.label :img_url, :class => "grid_1 alpha" %>
+    <%= f.file_field :img_url, :class => "grid_4 omega" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "grid_1 push_4" %>
   </div>
 <% end %>

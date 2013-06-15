@@ -4,7 +4,7 @@
 
 $(document).ready ->
 
-  $("footer").hover (->
+  $("#admin").hover (->
     $(this).stop().animate left: "0"
   ), ->
     $(this).stop().animate left: "-180"

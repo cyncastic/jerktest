@@ -5,16 +5,17 @@
     <th>Colour</th>
     <th>Hidden</th>
     <th></th>
-    <th></th>
   </tr>
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.name %></td>
     <td><%= category.colour %></td>
     <td><%= category.hidden %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+    <td class="actions">
+      <%= link_to 'Edit', edit_category_path(category) %>
+      <%= link_to 'Destroy', category, method: :delete, data: {confirm: 'Are you sure?'} %>
+    </td>
   </tr>
 <% end %>
 </table>
-<%= link_to 'New Category', new_category_path, :class => "btn" %>
+<%= link_to 'New Category', new_category_path, :class => "push_4 grid_1 btn" %>

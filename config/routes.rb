@@ -1,4 +1,7 @@
 JerkTest::Application.routes.draw do
+  resources :blogs
+
+
   resources :jerkblogs
 
 

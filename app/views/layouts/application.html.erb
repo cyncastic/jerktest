@@ -7,28 +7,44 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header class="container_5 clearfix">
+<header class="container_5 clearfix" id="pgheader">
   <nav class="grid_5" id="main-navigation">
     <ul>
       <li><%= link_to 'Contact', contact_path %></li>
       <%= render '/categories/categories', :collection => @categories %>
+      <li><%= link_to 'Home', root_path %></li>
     </ul>
   </nav>
 </header>
 <div role="main" class="container_5 clearfix">
   <%= yield %>
 </div>
-<footer>
-  <nav>
-    <ul>
-      <li><%= link_to 'Home', "/" %></li>
-      <li><%= link_to 'Artwork', artworks_path %></li>
-      <li><%= link_to 'Categories', categories_path %></li>
-      <li></li>
-      <li>Log Out</li>
-    </ul>
-  </nav>
-</footer>
+<nav id="admin">
+  <ul>
+    <li>Add Content
+      <ul>
+        <li><%= link_to 'Blog Entry', new_blog_path %></li>
+        <li><%= link_to 'New Artwork', new_artwork_path %></li>
+      </ul>
+    </li>
+    <li>Manage Content
+      <ul>
+        <li><%= link_to 'Blog', blogs_path %></li>
+        <li><%= link_to 'Artwork', artworks_path %></li>
+      </ul>
+    </li>
+    <li>Settings
+      <ul>
+        <li><%= link_to 'Categories', categories_path %></li>
+        <li>Social Links</li>
+        <li>Users</li>
+        <li>Analytics</li>
+      </ul>
+    </li>
+    <hr />
+    <li>LOG OUT</li>
+  </ul>
+</nav>
 <!--script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-33869460-1']);

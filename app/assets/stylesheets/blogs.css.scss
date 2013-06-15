@@ -1,0 +1,40 @@
+// Place all the styles related to the Blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$blue: #1eb1d7; 
+$pink: #ed1d7a;
+$green: #b9d548;
+$yellow: #fdf235;
+
+.post{
+	color: white;
+	padding-bottom: 10px;
+	margin-bottom: 50px;
+	border-bottom: 4px dotted $pink;
+	header{
+		color: $yellow;
+		h1{
+			color: white;
+			font-size: 2em;
+			margin: 0;
+		}
+		a{
+			color: $green;
+		}
+		time{
+			color: $blue;
+		}
+	}
+	p{
+		padding: 0;
+	}
+	footer{
+		color: $yellow;
+		ul{
+			margin:0; padding: 0;
+			list-style: none;
+			text-align: right;
+		}
+	}
+}

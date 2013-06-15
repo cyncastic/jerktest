@@ -1,0 +1,21 @@
+<h1>Listing blogs</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Title</th>
+    <th></th>
+  </tr>
+<% @blogs.each do |blog| %>
+  <tr>
+    <td><%= blog.created_at.strftime("%d %b. %Y") %></td>
+    <td><%= blog.title %></td>
+    <td class="actions">
+      <%= link_to 'Show', blog %>
+      <%= link_to 'Edit', edit_blog_path(blog) %>
+      <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New Blog', new_blog_path, :class => "push_4 grid_1 btn" %>
