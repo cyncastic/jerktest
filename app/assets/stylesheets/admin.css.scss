@@ -1,0 +1,42 @@
+$blue: #1eb1d7; 
+$pink: #ed1d7a;
+$green: #b9d548;
+$yellow: #fdf235;
+
+#admin{
+  font-size: .7em;
+  display: block;
+  width: 200px;
+  position: fixed; 
+  top: 58px; 
+  left: -180px;
+
+  box-shadow: 0  0 40px #000;
+
+  background: url('/assets/arrow.png') darken($green, 48) no-repeat center right;
+  border: 3px darken($green, 36) solid; 
+  border-left: none;
+  border-right: 5px darken($green, 35) solid;
+  border-bottom-right-radius: 4em;
+  border-top-right-radius: 1em;
+
+  ul{
+    margin:0; padding:0 20px 0 0;
+    list-style: none;
+    li{
+      margin: .9em 0 .9em .9em;
+      color: lighten($green,10);
+      li{
+        text-shadow: none;
+        a{
+          color: lighten($blue,5);
+          text-decoration: none;
+          &:hover{
+            color: lighten($blue, 47);
+            text-shadow: 1px 0 20px lighten($blue, 10);
+          }
+        }
+      }
+    }
+  }
+}
