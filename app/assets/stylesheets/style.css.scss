@@ -75,6 +75,17 @@ body{
   background: #000; 
   font-family: 'Pontano Sans', sans-serif;
   font-size:100%;
+  letter-spacing: .05em;
+}
+
+#pgheader{
+  margin-top: 0; margin-bottom: 10px; 
+  height: 50px; 
+  background: url('/assets/header.png') no-repeat;
+
+  h1{
+    font-size: 0; margin: 0; padding: 0;
+  }
 }
 
 #main-navigation ul li {
@@ -88,16 +99,6 @@ body{
     color: #eee; 
     &:hover  { color: $yellow;}
     &:active  { color: darken($yellow, 20);}
-  }
-}
-
-#pgheader{
-  margin-top: 0; margin-bottom: 10px; 
-  height: 50px; 
-  background: url('/assets/header.png') no-repeat;
-
-  h1{
-    font-size: 0; margin: 0; padding: 0;
   }
 }
 
@@ -125,53 +126,34 @@ ul#images{
 
 .fancybox-title span { font-family: 'Pontano Sans', sans-serif; }
 
+
+
+
+
 #contact-logo{ position: relative; top:50px; left: 30px;}
 #contact-text{ color: #ddd; font-size: 12pt; margin: 0; padding: 160px 0 0 0;}
 
-#contact-email{ color: white; font-size: 22pt; margin: 0; padding: 0; text-align: center; display: block; text-decoration: none;}
-#contact-email:active { color: #ccc;}
-#contact-email:visited { color: #ccc;}
-#contact-email:hover { color: #f24b95;}
-
-/*nav, nav ul li a:hover { color: #f895b8;}*/
-a#instagram, a#facebook{ position: absolute; top: 136px; height: 45px; width: 45px;}
-a#facebook{  background: url('/assets/contact/facebook.png'); left: 136px;}
-a#instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
-
-#admin{
-  font-size: .7em;
+#contact-email{
   display: block;
-  width: 200px;
-  position: fixed; 
-  top: 10px; left: -180px;
-
-  background: url('/assets/arrow.png') darken($green, 45) no-repeat center right;
-  border: 3px darken($green, 35) solid; border-left: none;
-  border-bottom-right-radius: 40px;
-  border-top-right-radius: 40px;
-
-  ul{
-    margin:0; padding:0 20px 0 10px;
-    list-style: none;
-    li{
-      margin: .9em 0 .9em .9em;
-      color: $yellow;
-      text-shadow: 0 0 10px black;
-      li{
-        text-shadow: none;
-        a{
-          color: $yellow;
-          text-decoration: none;
-          &:hover{ color: lighten($yellow, 40); }
-        }
-      }
-    }
-  }
+  margin: 0; padding: 0; 
+  color: white; 
+  font-size: 22pt; 
+  text-align: center;
+  text-decoration: none;
+  &:active { color: #ccc;}
+  &:visited { color: #ccc;}
+  &:hover { color: #f24b95;}
 }
 
-/* =============================================================================
-   Media Queries
-   ========================================================================== */
+a.instagram, a.facebook{ 
+  position: absolute; top: 136px; 
+  height: 45px; width: 45px;
+}
+a.facebook{  background: url('/assets/contact/facebook.png'); left: 136px;}
+a.instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
+
+
+
 
 /* =============================================================================
    Non-Semantic Helper Classes
