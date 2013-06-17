@@ -1,7 +1,7 @@
 class Artwork < ActiveRecord::Base
   attr_accessible :img_url, :length, :medium, :title, :width, :year, :category_id
 
-  validates :title, :medium, :img_url, presence: true
+  validates :title, :medium, :img_url, :category_id, presence: true
   validates :length, :width, numericality: {greater_than_or_equal_to: 1}
 
   validates :img_url, allow_blank: false, format: { 
