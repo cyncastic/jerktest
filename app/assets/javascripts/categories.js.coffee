@@ -13,3 +13,4 @@ $(document).ready ->
     $(this).stop().animate boxShadow: "0 0 30px #000"
   ), ->
     $(this).stop().animate boxShadow: "0 0 0px #000"
+

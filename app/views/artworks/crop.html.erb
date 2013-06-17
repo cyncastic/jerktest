@@ -1,0 +1,13 @@
+<h1>Create Thumbnail</h1>
+
+<div class="grid_5" id="crop-holder">
+<%= image_tag @artwork.img_url_url(:large), id: "cropbox" %>
+</div>
+<%= form_for @artwork do |f| %>
+    <% %w[x y w h].each do |attribute| %>
+    <%= f.hidden_field "crop_#{attribute}" %>
+  <% end %>
+  <div class="actions">
+    <%= f.submit "Crop", :class => "push_4 grid_1" %>
+  </div>
+<% end %>

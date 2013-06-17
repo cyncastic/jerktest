@@ -1,32 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @artwork.img_url_url(:thumb).to_s %>
+<%= image_tag @artwork.img_url_url.to_s %>
+<p><b><%= @artwork.title %></b></p>
+<p><%= @artwork.medium %></p>
+<p><%= @artwork.length %> x <%= @artwork.width %></p>
+<p><%= @artwork.year %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @artwork.title %>
-</p>
-
-<p>
-  <b>Medium:</b>
-  <%= @artwork.medium %>
-</p>
-
-<p>
-  <b>Dimensions:</b>
-  <%= @artwork.length %> x <%= @artwork.width %>
-</p>
-
-<p>
-  <b>Year:</b>
-  <%= @artwork.year %>
-</p>
-
-<p>
-  <b>Img url:</b>
-  <%= @artwork.img_url %>
-</p>
-
-
-<%= link_to 'Edit', edit_artwork_path(@artwork) %> |
-<%= link_to 'Back', artworks_path %>
