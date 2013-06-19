@@ -26,16 +26,17 @@ $yellow: #fdf235;
     li{
       margin: .9em 0 .9em .9em;
       color: lighten($green,10);
+      a{
+        color: lighten($blue,5);
+        text-decoration: none;
+        &:hover{
+          color: lighten($blue, 47);
+          text-shadow: 1px 0 20px lighten($blue, 10);
+        }
+      }
       li{
         text-shadow: none;
-        a{
-          color: lighten($blue,5);
-          text-decoration: none;
-          &:hover{
-            color: lighten($blue, 47);
-            text-shadow: 1px 0 20px lighten($blue, 10);
-          }
-        }
+        
       }
     }
   }

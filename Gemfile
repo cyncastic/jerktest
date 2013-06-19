@@ -19,6 +19,8 @@ gem 'carrierwave'
 gem 'rmagick', '2.13.2'
 gem 'fog', '~> 1.10.1'
 
+gem 'bcrypt-ruby'
+
 group :production do 
   gem 'pg', '0.12.2'
 end

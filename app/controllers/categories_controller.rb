@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  skip_before_filter :authorize, only: [:show]
+
   def index
     @categories = Category.all
 

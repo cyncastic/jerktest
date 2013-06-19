@@ -1,0 +1,129 @@
+$blue: #1eb1d7; 
+$pink: #ed1d7a;
+$green: #b9d548;
+$yellow: #fdf235;
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+
+#notice { color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  display: inline;
+  margin: 0; padding: 0;
+  label{
+    color: $pink;
+  }
+}
+
+#error_explanation {
+  border: 2px solid $pink;
+  border-radius: .25em;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: black;
+  color: white;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    margin: -7px;
+    margin-bottom: 0px;
+    color: $pink;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+
+
+
+
+h1{color: $blue;}
+
+/*-FORMS-*/
+
+div {
+  &.field, &.actions {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+.field label{
+  text-align: right;
+}
+input{background: #eee; border: 1px solid black;}
+select{ background-color: #fef;}
+label{color: $yellow;}
+/*-Tables-*/
+
+table{
+  width: 100%;
+  background-color: darken($green, 49);
+  th, td{
+    padding: .5em;
+  }
+  th{
+    background-color: darken($green, 40);
+    color: $yellow;
+    text-align: left;
+  }
+  td{
+    padding: 10px;
+    color: white;
+    vertical-align: middle;
+    border-bottom: 1px darken($green, 45) dashed;
+    &.actions{
+      text-align: right;
+      a{
+        text-align: center;
+        text-decoration: none;
+        margin-left: 10px;
+        color: darken($yellow, 20);
+        &:hover{ color: $yellow }
+      }
+    }
+    
+  }
+}
+
+a.btn{
+  background-color: darken($green, 40);
+  color: white;
+  border-radius: 10px;
+  padding: .1em;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  &:hover{
+    background-color: darken($green, 20);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
