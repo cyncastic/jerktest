@@ -76,6 +76,7 @@ body{
   font-family: 'Pontano Sans', sans-serif;
   font-size:100%;
   letter-spacing: .05em;
+  color: white;
 }
 
 #pgheader{
@@ -102,6 +103,10 @@ body{
   }
 }
 
+h1{color: $blue; margin-top: 0; padding-top: 0;}
+
+
+
 ul#images{
   margin: 0; padding: 0; 
   display: inline; 
@@ -112,7 +117,6 @@ ul#images{
     margin-bottom: 10px;
   }
 }
-
 .fancy{
 	box-shadow: inset 0 0 0 #000;
   width: 180px; height: 180px;
@@ -123,7 +127,6 @@ ul#images{
     position: relative; z-index: -1;
   }
 }
-
 .fancybox-title span { font-family: 'Pontano Sans', sans-serif; }
 
 

@@ -9,10 +9,17 @@ JerkTest::Application.routes.draw do
   end
 
   resources :users
-  resources :blogs
+  resources :blogs do
+    collection{ post :sort }
+  end
   resources :jerkblogs
-  resources :artworks
-  resources :categories
+  resources :artworks do
+    collection{ post :sort }
+  end
+  
+  resources :categories do
+    collection{ post :sort }
+  end
 
   get "static/contact", as: 'contact'
 

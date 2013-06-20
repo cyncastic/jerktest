@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   skip_before_filter :authorize, only: [:show]
 
   def index
-    @categories = Category.all
+    @categories = Category.order("position")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
   def show
     @categories = Category.all
     @category = Category.find(params[:id])
-    @artworks = @category.artworks
+    @artworks = @category.artworks.order("position")
 
     respond_to do |format|
       format.html # show.html.erb
@@ -73,5 +73,12 @@ class CategoriesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to categories_url }
     end
+  end
+
+  def sort
+    params[:category].each_with_index do |id, index|
+      Category.update_all({position: index+1}, {id: id})
+    end
+    render nothing: true
   end
 end

@@ -1,7 +1,7 @@
 class ArtworksController < ApplicationController
   def index
-    @artworks = Artwork.all
     @categories = Category.all
+    @artworks = Artwork.order("position")
   end
 
   def show
@@ -10,13 +10,13 @@ class ArtworksController < ApplicationController
   end
 
   def new
-    @artwork = Artwork.new
     @categories = Category.all
+    @artwork = Artwork.new
   end
 
   def edit
-    @artwork = Artwork.find(params[:id])
     @categories = Category.all
+    @artwork = Artwork.find(params[:id])
   end
 
   def create
@@ -54,5 +54,13 @@ class ArtworksController < ApplicationController
     @artwork.destroy
 
     redirect_to artworks_url
+  end
+
+
+  def sort
+    params[:artwork].each_with_index do |id, index|
+      Artwork.update_all({position: index+1}, {id: id})
+    end
+    render nothing: true
   end
 end

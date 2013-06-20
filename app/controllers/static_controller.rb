@@ -3,7 +3,7 @@ class StaticController < ApplicationController
 
   def home
   	@categories = Category.all
-    @blogs = Blog.all
+    @blogs = Blog.order("position")
   end
 
   def contact

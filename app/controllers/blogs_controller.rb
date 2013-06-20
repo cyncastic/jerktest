@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @categories = Category.all
-    @blogs = Blog.all
+    @blogs = Blog.order("position")
   end
 
   # GET /blogs/1
@@ -63,5 +63,12 @@ class BlogsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to blogs_url }
     end
+  end
+
+  def sort
+    params[:blog].each_with_index do |id, index|
+      Blog.update_all({position: index+1}, {id: id})
+    end
+    render nothing: true
   end
 end

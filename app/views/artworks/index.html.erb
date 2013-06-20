@@ -1,5 +1,6 @@
 <h1>Listing artworks</h1>
 <table>
+  <thead>
   <tr>
     <th>Image</th>
     <th>Title</th>
@@ -9,20 +10,22 @@
     <th>Year</th>
     <th></th>
   </tr>
+  </thead>
+  <tbody class="sorts" data-update-url="<%= sort_artworks_url %>">
 <% @artworks.each do |artwork| %>
-  <tr>
-    <td><%= image_tag artwork.img_url_url(:icon).to_s %></td>
-    <td><%= artwork.title %></td>
-    <td><%= artwork.category.name %></td>
-    <td><%= artwork.medium %></td>
-    <td><%= artwork.length %> x <%= artwork.width %></td>
-    <td><%= artwork.year %></td>
-    <td class="actions">
-        <%= link_to 'Show', artwork %>
-        <%= link_to 'Edit', edit_artwork_path(artwork) %>
-        <%= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </td>
-  </tr>
+      <%= content_tag_for :tr, artwork do %>
+        <td><%= image_tag artwork.img_url_url(:icon).to_s %></td>
+        <td><%= artwork.title %></td>
+        <td><%= artwork.category.name %></td>
+        <td><%= artwork.medium %></td>
+        <td><%= artwork.length %> x <%= artwork.width %></td>
+        <td><%= artwork.year %></td>
+        <td class="actions">
+            <%= link_to 'Edit', edit_artwork_path(artwork) %>
+            <%= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      <% end %>
 <% end %>
+  </tbody>
 </table>
 <%= link_to 'New Artwork', new_artwork_path, :class => "push_4 grid_1 btn" %>
