@@ -3,32 +3,17 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.order("position")
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @categories }
-    end
   end
 
   def show
     @categories = Category.all
     @category = Category.find(params[:id])
     @artworks = @category.artworks.order("position")
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @category }
-    end
   end
 
   def new
     @categories = Category.all
     @category = Category.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @category }
-    end
   end
 
   def edit
