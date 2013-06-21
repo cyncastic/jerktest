@@ -20,7 +20,7 @@
   </div>
   <div class="field">
     <%= f.label :medium, :class => "grid_1 alpha" %>
-    <%= f.text_field :medium, :class => "grid_4 omega" %>
+    <%= f.text_field :medium, :class => "grid_4 omega", :id => "mediumtxt", :data => {auto_complete_source: @media} %>
   </div>
   <div class="field">
     <%= f.label :length, :class => "grid_1 alpha" %>

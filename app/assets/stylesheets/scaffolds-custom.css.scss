@@ -51,12 +51,29 @@ div {
     margin-bottom: 20px;
   }
 }
-.field label{
-  text-align: right;
+.field label{ text-align: right;color: $yellow; }
+input{ background: #eee; border: 1px solid black; }
+select{ background-color: #fef; }
+
+
+input[type=checkbox]{
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    border-radius: 0px;
+    display: block;
+    position: relative;
+    height: 50px; 
+    width: 50px;
 }
-input{background: #eee; border: 1px solid black;}
-select{ background-color: #fef;}
-label{color: $yellow;}
+            
+
+
+
+
+
+
+
 /*-Tables-*/
 
 table{

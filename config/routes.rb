@@ -1,5 +1,8 @@
 JerkTest::Application.routes.draw do
 
+  resources :media
+
+
   get 'admin' => 'admin#index'
   
   controller :sessions do

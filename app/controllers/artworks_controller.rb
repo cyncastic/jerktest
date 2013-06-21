@@ -1,28 +1,24 @@
 class ArtworksController < ApplicationController
   def index
-    @categories = Category.all
     @artworks = Artwork.order("position")
   end
 
   def show
-    @categories = Category.all
     @artwork = Artwork.find(params[:id])
   end
 
   def new
-    @categories = Category.all
     @artwork = Artwork.new
+    @media = Medium.all
+    @media = @media.map{|name| name.name}
   end
 
   def edit
-    @categories = Category.all
     @artwork = Artwork.find(params[:id])
   end
 
   def create
     @artwork = Artwork.new(params[:artwork])
-    @categories = Category.all
-
     if @artwork.save
       if params[:artwork][:img_url]
         render :crop
@@ -36,8 +32,6 @@ class ArtworksController < ApplicationController
 
   def update
     @artwork = Artwork.find(params[:id])
-    @categories = Category.all
-
     if @artwork.update_attributes(params[:artwork])
       if params[:artwork][:img_url]
         render :crop
@@ -52,10 +46,8 @@ class ArtworksController < ApplicationController
   def destroy
     @artwork = Artwork.find(params[:id])
     @artwork.destroy
-
     redirect_to artworks_url
   end
-
 
   def sort
     params[:artwork].each_with_index do |id, index|
