@@ -1,0 +1,16 @@
+%p{ :id => "notice" }= notice
+
+%article{ :class => "container_5 clearfix post" }
+  %header{ :class => "grid_5" }
+    %h1= @blog.title
+    %p
+      Submited by
+      %a Jerk
+    %time= @blog.created_at.strftime("%d %b. %Y")
+  %p{ :class => "grid_5" }= @blog.post
+  %footer{ :class => "grid_5" }
+    %ul
+      %li Post to Facebook
+      %li Post to Twitter
+
+= link_to 'Edit', edit_blog_path(@blog), :class => "push_4 grid_1 btn"

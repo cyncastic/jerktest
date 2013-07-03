@@ -1,0 +1,16 @@
+%h1 listing users
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.name
+        %td{ :class => "actions" }
+          = link_to 'Edit', edit_user_path(user)
+          = link_to 'Destroy', user, method: :delete, data: {confirm: 'Are you sure?'}
+
+= link_to 'New User', new_user_path, :class => "push_4 grid_1 btn"

@@ -1,0 +1,20 @@
+= form_for(@category) do |f|
+  - if @category.errors.any?
+    .error_explanation
+      %h2
+        = pluralize(@category.errors.count, "error")
+        prohibited this category from being saved:
+      %ul
+        - @category.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name, :class => "grid_1 alpha"
+    = f.text_field :name, :class => "grid_4 omega"
+  .field
+    = f.label :colour, :class => "grid_1 alpha"
+    = f.text_field :colour, :class => "grid_4 omega"
+  .field
+    = f.label :hidden, :class => "grid_1 alpha"
+    = f.check_box :hidden, :class => "grid_4 omega"
+  .actions
+    = f.submit :class => "grid_1 push_4"

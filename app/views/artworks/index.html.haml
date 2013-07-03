@@ -1,0 +1,26 @@
+%h1 listing artworks
+
+%table
+  %thead
+    %tr
+      %th Image
+      %th Title
+      %th Category
+      %th Medium
+      %th Size
+      %th Year
+      %th
+  %tbody{ :class => "sorts", :data => { :update => { :url => sort_artworks_url }}}
+    - @artworks.each do |artwork|
+      = content_tag_for :tr, artwork do
+        %td= image_tag artwork.img_url_url(:icon).to_s
+        %td= artwork.title
+        %td= artwork.category.name
+        %td= artwork.medium
+        %td= artwork.length.to_s + " x " +artwork.width.to_s
+        %td= artwork.year
+        %td{ :class => "actions" }
+          = link_to 'Edit', edit_artwork_path(artwork)
+          = link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' }
+
+= link_to 'New Artwork', new_artwork_path, :class => "push_4 grid_1 btn"

@@ -1,0 +1,14 @@
+%h1 log in
+
+- if flash[:alert]
+  %p{ :id => "notice"}= flash[:alert]
+
+= form_tag do
+  .field
+    = label_tag :name, 'Name:', :class => "grid_1 alpha"
+    = text_field_tag :name, params[:name], :class => "grid_4 omega"
+  .field
+    = label_tag :password, 'Password:', :class => "grid_1 alpha"
+    = password_field_tag :password, params[:password], :class => "grid_4 omega"
+  .actions
+    = submit_tag "Login", :class => "grid_1 push_4"

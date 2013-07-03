@@ -1,0 +1,19 @@
+%h1 listing blog entries
+
+%table
+  %thead
+    %tr
+      %th Date
+      %th Title
+      %th
+  %tbody{ :class => "sorts", :data => { :update => { :url => sort_blogs_url }}}
+    - @blogs.each do |blog|
+      = content_tag_for :tr, blog do
+        %td= blog.created_at.strftime("%d %b. %Y")
+        %td= blog.title
+        %td{ :class => "actions"}
+          = link_to 'Show', blog
+          = link_to 'Edit', edit_blog_path(blog)
+          = link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }
+
+= link_to 'New Blog', new_blog_path, :class => "push_4 grid_1 btn"

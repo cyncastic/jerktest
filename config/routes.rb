@@ -1,9 +1,10 @@
 JerkTest::Application.routes.draw do
-
-  resources :media
-
+  
+  root to: 'static#home'
 
   get 'admin' => 'admin#index'
+  get 'contact' => 'static#contact'
+  get 'test' => 'static#test'
   
   controller :sessions do
     get 'login' => :new
@@ -11,11 +12,13 @@ JerkTest::Application.routes.draw do
     delete 'logout' => :destroy
   end
 
+  resources :media
   resources :users
+
   resources :blogs do
     collection{ post :sort }
   end
-  resources :jerkblogs
+  
   resources :artworks do
     collection{ post :sort }
   end
@@ -24,7 +27,4 @@ JerkTest::Application.routes.draw do
     collection{ post :sort }
   end
 
-  get "static/contact", as: 'contact'
-
-  root to: 'static#home'
 end

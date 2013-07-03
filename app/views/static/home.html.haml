@@ -1,0 +1,16 @@
+- @blogs.each do |blog|
+  %article{ :class => "container_5 clearfix post" }
+    %header{ :class => "grid_5" }
+      %h1= blog.title
+      %p 
+        Submited by 
+        %a
+          Jerk
+      %time= blog.created_at.strftime("%d %b. %Y")
+  
+    %p{ :class => "grid_5" }= blog.post
+
+    %footer{ :class => "grid_5" }
+      %ul
+        %li Post to Facebook
+        %li Post to Twitter
