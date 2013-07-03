@@ -68,9 +68,9 @@ $green: #b9d548;
 $yellow: #fdf235;
 
 body{
-  background: #000; 
+  background: #111; 
   font-family: 'Pontano Sans', sans-serif;
-  font-size:100%;
+  font-size: 100%;
   letter-spacing: .05em;
   color: white;
 }
@@ -93,12 +93,11 @@ body{
     text-align: right;
     font-size: 14pt; 
     text-transform: lowercase;
-    color: #eee; 
+    color: white; 
     &:hover  { color: $yellow;}
     &:active  { color: darken($yellow, 20);}
   }
 }
-
 
 ul#images{
   margin: 0; padding: 0; 
@@ -122,33 +121,6 @@ ul#images{
 }
 .fancybox-title span { font-family: 'Pontano Sans', sans-serif; }
 
-
-
-
-
-#contact-logo{ position: relative; top:50px; left: 30px;}
-#contact-text{ color: #ddd; font-size: 12pt; margin: 0; padding: 160px 0 0 0;}
-
-#contact-email{
-  display: block;
-  margin: 0; padding: 0; 
-  color: white; 
-  font-size: 22pt; 
-  text-align: center;
-  text-decoration: none;
-  &:active { color: #ccc;}
-  &:visited { color: #ccc;}
-  &:hover { color: #f24b95;}
-}
-
-a.instagram, a.facebook{ 
-  position: absolute; top: 136px; 
-  height: 45px; width: 45px;
-}
-a.facebook{  background: url('/assets/contact/facebook.png'); left: 136px;}
-a.instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
-
-
 #crop-holder{
   background: #222;
   text-align: center;
@@ -166,4 +138,3 @@ a.instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
-

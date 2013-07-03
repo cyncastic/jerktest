@@ -12,8 +12,7 @@ JerkTest::Application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  resources :media
-  resources :users
+  resources :media, :users
 
   resources :blogs do
     collection{ post :sort }

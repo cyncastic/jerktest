@@ -11,5 +11,5 @@
         %td= medium.name
         %td{ :class => "actions"}
           = link_to 'Edit', edit_medium_path(medium)
-          = link_to 'Destroy', medium, method: :delete, data: { confirm: 'Are you sure?' }
+          = link_to 'Destroy', medium, method: :delete, class: "delete_btn", data: { confirm: 'Are you sure?', remote: true }
 = link_to 'New Medium', new_medium_path, :class => "push_4 grid_1 btn"

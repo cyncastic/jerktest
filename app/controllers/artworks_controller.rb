@@ -46,7 +46,11 @@ class ArtworksController < ApplicationController
   def destroy
     @artwork = Artwork.find(params[:id])
     @artwork.destroy
-    redirect_to artworks_url
+
+    respond_to do |format|
+      format.html { redirect_to artworks_url }
+      format.js { render nothing: true }
+    end
   end
 
   def sort

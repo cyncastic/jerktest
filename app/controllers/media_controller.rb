@@ -25,10 +25,8 @@ class MediaController < ApplicationController
     respond_to do |format|
       if @medium.save
         format.html { redirect_to @medium, notice: 'Medium was successfully created.' }
-        format.json { render json: @medium, status: :created, location: @medium }
       else
         format.html { render action: "new" }
-        format.json { render json: @medium.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -39,23 +37,19 @@ class MediaController < ApplicationController
     respond_to do |format|
       if @medium.update_attributes(params[:medium])
         format.html { redirect_to @medium, notice: 'Medium was successfully updated.' }
-        format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @medium.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /media/1
-  # DELETE /media/1.json
   def destroy
     @medium = Medium.find(params[:id])
     @medium.destroy
 
     respond_to do |format|
       format.html { redirect_to media_url }
-      format.json { head :no_content }
+      format.js { render nothing: true}
     end
   end
 end

@@ -21,6 +21,6 @@
         %td= artwork.year
         %td{ :class => "actions" }
           = link_to 'Edit', edit_artwork_path(artwork)
-          = link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' }
+          = link_to 'Destroy', artwork, method: :delete, class: "delete_btn", data: { confirm: 'Are you sure?', remote: true }
 
 = link_to 'New Artwork', new_artwork_path, :class => "push_4 grid_1 btn"
