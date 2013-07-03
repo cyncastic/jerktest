@@ -6,7 +6,7 @@
       %th Date
       %th Title
       %th
-  %tbody{ :class => "sorts", :data => { :update => { :url => sort_blogs_url }}}
+  %tbody{ :class => "sorts", :data => { :update_url => sort_blogs_url }}
     - @blogs.each do |blog|
       = content_tag_for :tr, blog do
         %td= blog.created_at.strftime("%d %b. %Y")

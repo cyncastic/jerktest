@@ -10,7 +10,7 @@
       %th Size
       %th Year
       %th
-  %tbody{ :class => "sorts", :data => { :update => { :url => sort_artworks_url }}}
+  %tbody{ :class => "sorts", :data => { :update_url => sort_artworks_url }}
     - @artworks.each do |artwork|
       = content_tag_for :tr, artwork do
         %td= image_tag artwork.img_url_url(:icon).to_s
