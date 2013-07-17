@@ -13,10 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
+//= require ckeditor/init
 //= require_tree .
-
-$(function() {
-  $('.delete_btn').bind('ajax:success', function() {
-      $(this).closest('tr').fadeOut();  
-  });
-});

@@ -1,5 +1,7 @@
 JerkTest::Application.routes.draw do
   
+  mount Ckeditor::Engine => '/ckeditor'
+
   root to: 'static#home'
 
   get 'admin' => 'admin#index'
