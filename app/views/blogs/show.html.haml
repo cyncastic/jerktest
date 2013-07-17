@@ -7,7 +7,7 @@
       Submited by
       %a Jerk
     %time= @blog.created_at.strftime("%d %b. %Y")
-  %p{ :class => "grid_5" }= @blog.post
+  %p{ :class => "grid_5" }= raw(@blog.post)
   %footer{ :class => "grid_5" }
     %ul
       %li Post to Facebook
