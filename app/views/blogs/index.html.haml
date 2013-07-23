@@ -5,13 +5,13 @@
       %p 
         Submited by 
         %a Jerk
-      %time= blog.created_at.strftime("%d %b. %Y")
+        %time= blog.created_at.strftime("%d %b. %Y")
   
-    %p.grid_5= raw(blog.post)
+    .grid_5= raw(blog.post)
 
     %footer.grid_5
       %ul
         %li Post to Facebook
         - if session[:user_id]
           %li= link_to 'Edit', edit_blog_path(blog)
-        %li= link_to 'Destroy', blog, method: :delete, class: "delete_btn", data: { confirm: 'Are you sure?' }
+        %li= link_to 'Destroy', blog, method: :delete, class: 'delete_btn', data: { confirm: 'Are you sure?' }

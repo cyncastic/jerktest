@@ -1,0 +1,68 @@
+$blue: #1eb1d7; 
+$pink: #ed1d7a;
+$green: #b9d548;
+$yellow: #fdf235;
+
+$admin: $blue;
+body{
+	font-size: 20px
+}
+
+p{
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+h1 {
+    font-size: 2.369em;
+    line-height: 0.63317856em;
+    margin-top: 0;
+    margin-bottom: 0.63317856em;
+}
+h2 {
+    font-size: 1.777em;
+    line-height: 0.844119302194713em;
+    margin-top: 0;
+    margin-bottom: 0.84411930219471em;
+}
+h3 {
+    font-size: 1.333em;
+    line-height: 1.12528132033008em;
+    margin-top: 0;
+    margin-bottom: 1.12528132033008em;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+h5 {
+    font-size: 0.75em;
+    line-height: 2em;
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+h6 {
+    font-size: 0.563em;
+    line-height: 2.66429840142096em;
+    margin-top: 0;
+    margin-bottom: 2.66429840142096em;
+}
+ol, ul {
+    margin-top: 0em;
+    margin-bottom: 1.5em;
+}
+li{
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+blockquote{
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-top: 1.5em;
+	margin-left: 3em;
+	margin-bottom: 3em;
+}

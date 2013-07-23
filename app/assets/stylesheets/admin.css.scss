@@ -2,54 +2,35 @@ $blue: #1eb1d7;
 $pink: #ed1d7a;
 $green: #b9d548;
 $yellow: #fdf235;
-$admin: $pink;
 
-@mixin adminfont{
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: thin;
-  letter-spacing: .125em;
-}
+$admin: $blue;
 
-
-h1{
-  @include adminfont;
-  margin: 0;
-  padding: 0 0 0.63317856em;
-  font-size: 2.369em;
-  line-height: 0.63317856em;
-  color: $admin;
-}
-
-#admin{
-  @include adminfont;
-  font-size: .8em;
+nav#admin{
+  font-size: 1em;
   display: block;
   width: 200px;
   position: fixed; 
-  top: 58px; 
+  top: 3em; 
   left: -180px;
 
   box-shadow: 0  0 40px #000;
 
   background: url('/assets/arrow.png') #ddd no-repeat center right;
-  border: 3px darken($admin, 20) solid; 
+  border: 3px darken($admin, 10) solid; margin-top:-3px;
   border-left: none;
-  border-right: 4px darken($admin, 20) solid;
-  border-bottom-right-radius: 4em;
+  border-bottom-right-radius: 3em;
   border-top-right-radius: 1em;
 
   ul{
-    margin:0; padding:0 .5em 0 0;
     list-style: none;
+    margin-left: 1em;
     li{
-      margin: 0.5em 0 0.5em 0.5em;
-      color: $admin;
+      color: black;
       a{
-        color: darken($admin,5);
+        color: $admin;
         text-decoration: none;
         &:hover{
-          color: darken($admin, 47);
-          text-shadow: 1px 0 20px darken($admin, 10);
+          color: darken($admin, 10);
         }
       }
       li{
@@ -60,10 +41,12 @@ h1{
 }
 
 
-// #notice { color: $admin; }
+#notice{
+  color: $admin;
+}
 
-.field_with_errors {
-  padding: 2px;
+.field_with_errors{
+  padding: 0.75em;
   display: inline;
   margin: 0; padding: 0;
   label{
@@ -72,46 +55,52 @@ h1{
 }
 
 #error_explanation {
-  border: 2px solid $admin;
+  border: .1em solid $admin;
   border-radius: .25em;
-  padding: 7px;
+  padding: 0.75px;
   padding-bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.3em;
   background-color: black;
   color: white;
   h2 {
     text-align: left;
     font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    margin: -7px;
-    margin-bottom: 0px;
     color: $admin;
   }
   ul li {
-    font-size: 12px;
     list-style: square;
   }
 }
 
+
 /*-FORMS-*/
-form{margin-top: 10px;}
-div {
-  &.field, &.actions {
-    display: inline-block;
-    margin-bottom: 20px;
+form{
+  div{
+    &.field, &.actions {
+      display: inline-block;
+      margin-bottom: 0.5em;
+    }
+  }
+  label{ 
+    text-align: right;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    margin: 0; padding:0;
+    color: $admin;
+  }
+  input, select{
+    background-color: #eee;
+    border: 1px solid black;
+    font-size: 1.25em;
+    vertical-align: middle;
   }
 }
-.field label{ 
-  @include adminfont;
-  text-align: right;
-  color: $admin;
-}
-input{
-  background: #eee; 
-  border: 1px solid black;
-}
-select{
-  background-color: #fef;
+
+#artwork_img_url{
+  font-size: 1em;
+  padding-top:0.25em;
+  padding-bottom:0.25em;
+  padding-left:0.125em;
 }
 
 
@@ -121,57 +110,49 @@ select{
 
 
 
-
-
 /*-Tables-*/
 
 .admintable{
-  font-size: .7em;
   width: 100%;
-  background-color: darken($admin, 45);
-  border-bottom: 2px darken($admin, 40) solid;
+  background-color: #ddd;
+  border: 3px darken($admin, 10) solid; 
+  margin-bottom: 1.5em;
   th, td{
-    padding: .5em;
+    padding: .75em;
   }
   th{
-    font-size: 1.2em;
-    background-color: darken($admin, 35);
-    color: lighten($admin, 45);
+    background-color: #ccc;
+    color: #000;;
     text-align: left;
-    text-shadow: -.1em .1em .1em darken($admin,45);
+    text-shadow: -.1em .1em .1em white;
   }
   tr{
-    &:nth-child(odd){ 
-      background-color: darken($admin, 43);
-    }
     &:hover{
-      background-color: darken($admin, 40);
+      background-color: #eee;
       td{
-        color: $admin;
         a:hover{
           color: lighten($admin, 45);
-          text-shadow: -.1em .1em .1em black;
         }
       }
     }
   }
   td{
     padding: 10px;
-    color: white;
+    color: #000;
     vertical-align: middle;
     border-bottom: 1px darken($admin, 35) dashed;
     img{
-      box-shadow: 0 0 20px darken($admin, 40);
+      box-shadow: 0 0 10px rgba(0,0,0,.5);
     }
     &.actions{
       text-align: right;
       a{
         text-transform: uppercase;
         text-decoration: none;
-        margin-left: 10px;
-        color: darken($admin, 20);
+        margin-left: 1em;
+        color: $admin;
         &:hover{
-          color: lighten($admin, 20);
+          color: #fff;
         }
       }
     }
@@ -179,19 +160,18 @@ select{
 }
 
 a.btn{
-  background-color: darken($admin, 40);
-  color: lighten($admin, 20);
-  border-radius: 5px;
-  padding: .1em .05em;
+  padding: .5em 0;
+  border-radius: .25em;
+  font-weight: bold;
+  background-color: #ccc;
+  color: darken($admin, 10);
   text-align: center;
   text-decoration: none;
-  margin-top: 10px;
   &:hover{
-    background-color: lighten($admin, 20);
-    color: darken($admin, 40);
+    background-color: #ddd;
+    color: $admin;
   }
 }
-
 
 
 

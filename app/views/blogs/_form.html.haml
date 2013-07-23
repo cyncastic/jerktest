@@ -9,14 +9,14 @@
           %li= msg
   
   .field
-    = f.label :title, :class => "grid_1 alpha"
-    = f.text_field :title, :class => "grid_4 omega"  
+    = f.label :title, class: 'grid_1 alpha'
+    = f.text_field :title, class: 'grid_4 omega' 
   .field
-    = f.label :post, :class => "grid_1 alpha"
+    = f.label :post, class: 'grid_1 alpha'
     #ckeholder.grid_4.omega
-      = f.text_area :post, :id => 'editor1'
+      = f.text_area :post, id: 'editor1'
   .actions
-    = f.submit :class => "grid_1 push_4"
+    = f.submit class: 'grid_1 push_4'
 
   :javascript
     CKEDITOR.replace( 'editor1', {

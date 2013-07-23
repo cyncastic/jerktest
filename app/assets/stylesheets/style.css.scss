@@ -5,7 +5,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
-body { margin: 0; font-size: 1em; line-height: 1.4; }
+body { margin: 0; font-size: 1em; line-height: 1.5; }
 
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
@@ -85,15 +85,14 @@ body{
 
 #main-navigation ul li {
   float: right; 
-  margin: 25px 0 0 10px;
+  margin: 1.5em 0 0 1em;
   a {
     text-decoration: none; 
     text-align: right;
-    font-size: 14pt; 
     text-transform: lowercase;
     color: white; 
-    &:hover  { color: $yellow;}
-    &:active  { color: darken($yellow, 20);}
+    &:hover  { color: $blue;}
+    &:active  { color: darken($blue, 20);}
   }
 }
 

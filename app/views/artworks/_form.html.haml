@@ -8,25 +8,25 @@
         - @artwork.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :category_id, :class => "grid_1 alpha"
-    = f.collection_select(:category_id, Category.all, :id, :name, {:prompt=>true}, { :class => "grid_1 omega" })
+    = f.label :category_id, class: 'grid_1 alpha'
+    = f.collection_select(:category_id, Category.all, :id, :name, { prompt: false }, { class: 'grid_1 omega' })
   .field
-    = f.label :title, :class => "grid_1 alpha"
-    = f.text_field :title, :class => "grid_4 omega"
+    = f.label :title, class: 'grid_1 alpha'
+    = f.text_field :title, class: 'grid_4 omega'
   .field
-    = f.label :medium, :class => "grid_1 alpha"
-    = f.text_field :medium, :class => "grid_4 omega", :id => "mediumtxt", :data => {auto_complete_source: @media}
+    = f.label :medium, class: 'grid_1 alpha'
+    = f.text_field :medium, class: 'grid_4 omega', id: 'mediumtxt', data: {auto_complete_source: @media }
   .field
-    = f.label :length, :class => "grid_1 alpha"
-    = f.number_field :length, :class => "grid_1 omega"
+    = f.label :length, class: 'grid_1 alpha'
+    = f.number_field :length, class: 'grid_1 omega'
   .field
-    = f.label :width, :class => "grid_1 alpha"
-    = f.number_field :width, :class => "grid_1 omega"
+    = f.label :width, class: 'grid_1 alpha'
+    = f.number_field :width, class: 'grid_1 omega'
   .field
-    = f.label :year, :class => "grid_1 alpha"
-    = f.select :year, (2010..Time.now.year).to_a, {:prompt=>true}, {:class => "grid_1 omega"}
+    = f.label :year, class: 'grid_1 alpha'
+    = f.select :year, (2010..Time.now.year).to_a.reverse, { prompt: false }, { class: 'grid_1 omega' }
   .field
-    = f.label :img_url, :class => "grid_1 alpha"
-    = f.file_field :img_url, :class => "grid_4 omega"
+    = f.label :img_url, class: 'grid_1 alpha'
+    = f.file_field :img_url, class: 'grid_4 omega'
   .actions
-    = f.submit :class => "grid_1 push_4"
+    = f.submit class: 'grid_1 push_4'
