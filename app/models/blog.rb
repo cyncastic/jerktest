@@ -3,7 +3,5 @@ class Blog < ActiveRecord::Base
 
   validates :title, :post, presence: true
 
-  mount_uploader :image, JerkblogUploader
-
   belongs_to :user
 end

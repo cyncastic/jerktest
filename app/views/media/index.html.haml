@@ -1,6 +1,6 @@
 %h1 media
 
-%table
+%table.admintable
   %thead
     %tr
       %th Name
@@ -9,7 +9,8 @@
     - @media.each do |medium|
       %tr
         %td= medium.name
-        %td{ :class => "actions"}
+        %td.actions
           = link_to 'Edit', edit_medium_path(medium)
           = link_to 'Destroy', medium, method: :delete, class: "delete_btn", data: { confirm: 'Are you sure?', remote: true }
+
 = link_to 'New Medium', new_medium_path, :class => "push_4 grid_1 btn"

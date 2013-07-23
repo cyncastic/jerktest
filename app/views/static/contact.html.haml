@@ -1,36 +1,27 @@
-%ul{ :id => "images"}
+%ul{ id: 'images'}
 
-  %li{ :class => "grid_1" }
-    %a{ :class =>"fancy", :rel => "group1", :href => "/assets/contact/1.jpg" }
-      %img{ :src => "/assets/contact/3-t.jpg"}
-  
-  %li{ :class => "grid_1" }
-    %img{ :id => "contact-logo", :src => "/assets/contact/logo.png"}
-  
-  %li{ :class => "grid_3" }
-    %p{ :id => "contact-text"}
+  %li.grid_1
+    %a.fancy{ rel: 'group1', href: '/assets/contact/1.jpg' }
+      %img{ src: '/assets/contact/3-t.jpg'}
+  %li{ class: 'grid_1' }
+    %img#contact-logo{ src: '/assets/contact/logo.png'}
+  %li.grid_3
+    %p#contact-text
       Buyer Inquiries, Commisions and Event Information.
 
-  
-
-  %li{ :class => "grid_1" }
-    %a{ :class =>"fancy", :rel => "group1", :href => "/assets/contact/2.jpg" }
-      %img{ :src => "/assets/contact/2-t.jpg"}
-  
-  %li{ :class => "grid_4" }
-    %a{ :id => "contact-email", :href => "mailto:jerkface@jerkface.com"}
+  %li.grid_1
+    %a.fancy{ rel: 'group1', href: '/assets/contact/2.jpg' }
+      %img{ src: '/assets/contact/2-t.jpg'}
+  %li.grid_4
+    %a#contact-email{ href: 'mailto:jerkface@jerkface.com'}
       jerkface@jerkface.com
 
-  
-  
-  %li{ :class => "grid_1" }
-    %a{ :class =>"fancy", :rel => "group1", :href => "/assets/contact/3.jpg" }
-      %img{ :src => "/assets/contact/1-t.jpg"}
-  
-  %li{ :class => "grid_3" }
-  
-  %li{ :class => "grid_1" }
-    %a{ :class => "ir instagram", :href => "http://instagram.com/incarceratedjerkfaces"}
+  %li.grid_1
+    %a.fancy{ rel: 'group1', href: '/assets/contact/3.jpg' }
+      %img{ src: '/assets/contact/1-t.jpg'}
+  %li.grid_3
+  %li.grid_1
+    %a.ir.instagram{ href: 'http://instagram.com/incarceratedjerkfaces'}
       Instagram
-    %a{ :class => "ir facebook", :href => "http://facebook.com/JerkFaceNYC"}
+    %a.ir.instagram{ href: 'http://facebook.com/JerkFaceNYC' }
       Facebook

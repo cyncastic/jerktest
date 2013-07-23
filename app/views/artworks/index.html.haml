@@ -1,6 +1,6 @@
 %h1 listing artworks
 
-%table
+%table.admintable
   %thead
     %tr
       %th Image
@@ -10,7 +10,7 @@
       %th Size
       %th Year
       %th
-  %tbody{ :class => "sorts", :data => { :update_url => sort_artworks_url }}
+  %tbody.sorts{ :data => { :update_url => sort_artworks_url } }
     - @artworks.each do |artwork|
       = content_tag_for :tr, artwork do
         %td= image_tag artwork.img_url_url(:icon).to_s
@@ -19,7 +19,7 @@
         %td= artwork.medium
         %td= artwork.length.to_s + " x " +artwork.width.to_s
         %td= artwork.year
-        %td{ :class => "actions" }
+        %td.actions
           = link_to 'Edit', edit_artwork_path(artwork)
           = link_to 'Destroy', artwork, method: :delete, class: "delete_btn", data: { confirm: 'Are you sure?', remote: true }
 

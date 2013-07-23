@@ -2,20 +2,26 @@ $blue: #1eb1d7;
 $pink: #ed1d7a;
 $green: #b9d548;
 $yellow: #fdf235;
-
 $admin: $pink;
 
+@mixin adminfont{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: thin;
+  letter-spacing: .125em;
+}
+
+
 h1{
+  @include adminfont;
+  margin: 0;
+  padding: 0 0 0.63317856em;
+  font-size: 2.369em;
+  line-height: 0.63317856em;
   color: $admin;
-  font-weight: normal;
-  margin: 0; 
-  padding: 0;
-  //background: $admin;
-  border-top-right-radius: .5em;
-  border-top-left-radius: .5em;
 }
 
 #admin{
+  @include adminfont;
   font-size: .8em;
   display: block;
   width: 200px;
@@ -25,24 +31,24 @@ h1{
 
   box-shadow: 0  0 40px #000;
 
-  background: url('/assets/arrow.png') darken($admin, 44) no-repeat center right;
-  border: 3px darken($admin, 10) solid; 
+  background: url('/assets/arrow.png') #ddd no-repeat center right;
+  border: 3px darken($admin, 20) solid; 
   border-left: none;
-  border-right: 5px darken($admin, 10) solid;
+  border-right: 4px darken($admin, 20) solid;
   border-bottom-right-radius: 4em;
   border-top-right-radius: 1em;
 
   ul{
-    margin:0; padding:0 20px 0 0;
+    margin:0; padding:0 .5em 0 0;
     list-style: none;
     li{
-      margin: .9em 0 .9em .9em;
-      color: lighten($admin, 45);
+      margin: 0.5em 0 0.5em 0.5em;
+      color: $admin;
       a{
-        color: lighten($admin,5);
+        color: darken($admin,5);
         text-decoration: none;
         &:hover{
-          color: invert(darken($admin, 47));
+          color: darken($admin, 47);
           text-shadow: 1px 0 20px darken($admin, 10);
         }
       }
@@ -54,7 +60,7 @@ h1{
 }
 
 
-#notice { color: $admin; }
+// #notice { color: $admin; }
 
 .field_with_errors {
   padding: 2px;
@@ -95,9 +101,18 @@ div {
     margin-bottom: 20px;
   }
 }
-.field label{ text-align: right;color: $admin; }
-input{ background: #eee; border: 1px solid black; }
-select{ background-color: #fef; }
+.field label{ 
+  @include adminfont;
+  text-align: right;
+  color: $admin;
+}
+input{
+  background: #eee; 
+  border: 1px solid black;
+}
+select{
+  background-color: #fef;
+}
 
 
             
@@ -110,7 +125,7 @@ select{ background-color: #fef; }
 
 /*-Tables-*/
 
-table{
+.admintable{
   font-size: .7em;
   width: 100%;
   background-color: darken($admin, 45);

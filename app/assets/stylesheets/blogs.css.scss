@@ -4,35 +4,57 @@ $green: #b9d548;
 $yellow: #fdf235;
 
 .post{
-	color: white;
-	padding-bottom: 10px;
-	margin-bottom: 50px;
-	border-bottom: 4px dashed darken($pink, 10);
-	header{
-		color: $green;
-		h1{
-			color: $yellow;
-			font-size: 2em;
-			margin: 0;
-			padding-top: 0;
-		}
-		a{
-			color: $pink;
-			&:hover{ color: lighten($pink, 10)}
-		}
-		time{
-			color: $blue;
-		}
-	}
-	p{
-		padding: 0;
-	}
-	footer{
-		color: $yellow;
-		ul{
-			margin:0; padding: 0;
-			list-style: none;
-			text-align: right;
-		}
-	}
+  color: white;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  border-bottom: 4px dashed darken($pink, 10);
+  a{
+    color: $pink;
+    text-decoration: none;
+    &:hover{ 
+      color: lighten($pink, 20);
+    }
+  }
+  p{
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0 0 1.5em;
+  }
+  ul, ol{
+    margin: 0; 
+    padding: 0 0 1.5em 2.369em;
+    counter-reset: item;
+    li{
+      line-height: 1.5em;
+    }
+  }
+  hr{
+    margin:0 auto 1.5em;
+    width: 99%;
+    height: 0;
+    border: 0;
+    border: 1px dashed $green;
+  }
+  header{
+    color: $green;
+    h1{
+      margin: 0;
+      padding: 0 0 0.63317856em;
+      font-size: 2.369em;
+      line-height: 0.63317856em;
+      color: $yellow;
+    }
+    time{
+      color: $blue;
+    }
+  }
+  footer{
+    color: $yellow;
+    ul{
+      margin:0; padding: 0;
+      list-style: none;
+      text-align: right;
+    }
+  }
 }
