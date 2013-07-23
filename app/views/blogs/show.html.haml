@@ -11,5 +11,7 @@
   %footer.grid_5
     %ul
       %li Post to Facebook
-
-= link_to 'Edit', edit_blog_path(@blog), :class => "push_4 grid_1 btn"
+    %ul.adminlistoptions
+      - if session[:user_id]
+        %li= link_to 'Edit', edit_blog_path
+        %li= link_to 'Destroy', blog_path, method: :delete, class: "delete_btn", data: { confirm: 'Are you sure?' }

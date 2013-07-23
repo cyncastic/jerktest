@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem 'rails', '3.2.13'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-
 
 gem 'ckeditor'
 gem 'mini_magick'

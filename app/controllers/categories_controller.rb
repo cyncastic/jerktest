@@ -6,23 +6,19 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @categories = Category.all
     @category = Category.find(params[:id])
     @artworks = @category.artworks.order("position")
   end
 
   def new
-    @categories = Category.all
     @category = Category.new
   end
 
   def edit
-    @categories = Category.all
     @category = Category.find(params[:id])
   end
 
   def create
-    @categories = Category.all
     @category = Category.new(params[:category])
 
     respond_to do |format|
@@ -35,7 +31,6 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @categories = Category.all
     @category = Category.find(params[:id])
 
     respond_to do |format|

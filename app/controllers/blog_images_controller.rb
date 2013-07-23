@@ -1,6 +1,4 @@
 class BlogImagesController < ApplicationController
-  # GET /blog_images
-  # GET /blog_images.json
   def index
     @blog_images = BlogImage.all
     @blog_image = BlogImage.new
@@ -29,13 +27,10 @@ class BlogImagesController < ApplicationController
     end
   end
 
-  # GET /blog_images/1/edit
   def edit
     @blog_image = BlogImage.find(params[:id])
   end
 
-  # POST /blog_images
-  # POST /blog_images.json
   def create
     @blog_image = BlogImage.new(params[:blog_image])
 
@@ -66,8 +61,6 @@ class BlogImagesController < ApplicationController
     end
   end
 
-  # DELETE /blog_images/1
-  # DELETE /blog_images/1.json
   def destroy
     @blog_image = BlogImage.find(params[:id])
     @blog_image.destroy

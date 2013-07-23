@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   def index
-    @categories = Category.all
     @users = User.order(:name)
 
     respond_to do |format|
@@ -9,7 +8,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @categories = Category.all
     @user = User.find(params[:id])
 
     respond_to do |format|
@@ -18,7 +16,6 @@ class UsersController < ApplicationController
   end
 
   def new
-    @categories = Category.all
     @user = User.new
 
     respond_to do |format|

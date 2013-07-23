@@ -1,22 +1,18 @@
 class BlogsController < ApplicationController
 
   def index
-    @categories = Category.all
     @blogs = Blog.order("position")
   end
 
   def show
-    @categories = Category.all
     @blog = Blog.find(params[:id])
   end
 
   def new
-    @categories = Category.all
     @blog = Blog.new
   end
 
   def edit
-    @categories = Category.all
     @blog = Blog.find(params[:id])
   end
 
@@ -52,12 +48,5 @@ class BlogsController < ApplicationController
       format.html { redirect_to blogs_url }
       format.js { render nothing: true }
     end
-  end
-
-  def sort
-    params[:blog].each_with_index do |id, index|
-      Blog.update_all({ position: index + 1 }, { id: id })
-    end
-    render nothing: true
   end
 end

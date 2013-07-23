@@ -1,21 +1,17 @@
 class MediaController < ApplicationController
   def index
-    @categories = Category.all
     @media = Medium.all
   end
 
   def show
-    @categories = Category.all
     @medium = Medium.find(params[:id])
   end
 
   def new
-    @categories = Category.all
     @medium = Medium.new
   end
 
   def edit
-    @categories = Category.all
     @medium = Medium.find(params[:id])
   end
 
