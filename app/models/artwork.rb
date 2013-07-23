@@ -9,10 +9,6 @@ class Artwork < ActiveRecord::Base
 
   validates :title, :medium, :img_url, :category_id, presence: true
   validates :length, :width, numericality: { greater_than_or_equal_to: 1 }
-  validates :img_url, allow_blank: false, format: { 
-  	with: %r{\.(gif|jpg|png)$}i,
-  	message: 'must be a URL for GIF, JPG or PNG image.'
-  }
 
   mount_uploader :img_url, UpjerkUploader
 

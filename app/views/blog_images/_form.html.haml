@@ -1,0 +1,15 @@
+= form_for @blog_image, remote: true do |f|
+  - if @blog_image.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@blog_image.errors.count, "error")
+        prohibited this blog image from being saved:
+      %ul
+        - @blog_image.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :image, :class => "grid_1 alpha"
+    = f.file_field :image, :class => "grid_4 omega"
+  .actions
+    = f.submit :class => "grid_1 push_4"

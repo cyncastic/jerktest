@@ -4,12 +4,11 @@ CKEDITOR.editorConfig = function( config )
 	config.toolbar_MyToolbar =
 	[	
 		{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
-		{ name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv',
-		'-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ] },
+		{ name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ] },
 		{ name: 'links', items : [ 'Link','Unlink' ] },
 		{ name: 'insert', items : [ 'Image','Table','HorizontalRule' ] },
 		'/',
-		{ name: 'styles', items : [ 'Styles','Format','Font','FontSize' ] },
+		{ name: 'styles', items : [ 'Styles','Format','FontSize' ] },
 		{ name: 'colors', items : [ 'TextColor' ] },
 		{ name: 'tools', items : [ 'Maximize', 'ShowBlocks' ] }
 	];
@@ -32,7 +31,6 @@ CKEDITOR.on( 'dialogDefinition', function( ev ) {
 	}
 
 	// Check if the definition is from the dialog we're interested in (the 'image' dialog).
-	//  This dialog name found using DevTools plugin
 	if ( dialogName == 'image' ){
 		// Remove the 'Link' and 'Advanced' tabs from the 'Image' dialog.
 		dialogDefinition.removeContents( 'Link' );
@@ -42,8 +40,15 @@ CKEDITOR.on( 'dialogDefinition', function( ev ) {
 		var infoTab = dialogDefinition.getContents( 'info' );
 
 		// Remove unnecessary widgets/elements from the 'Image Info' tab.         
+		// infoTab.remove( 'txtUrl');
+		// infoTab.remove( 'txtAlt');
+		// infoTab.remove( 'txtHeight');
+		// infoTab.remove( 'txtWidth');
+		infoTab.remove( 'txtBorder');
+		// infoTab.remove( 'htmlPreview');
 		infoTab.remove( 'txtHSpace');
 		infoTab.remove( 'txtVSpace');
+		// infoTab.remove( 'cmbAlign');
 	}
 
 });

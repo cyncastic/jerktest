@@ -1,5 +1,8 @@
 JerkTest::Application.routes.draw do
   
+  resources :blog_images
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
   root to: 'static#home'
