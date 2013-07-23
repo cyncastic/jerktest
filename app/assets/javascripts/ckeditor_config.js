@@ -21,14 +21,22 @@ CKEDITOR.on( 'dialogDefinition', function( ev ) {
 	// Take the dialog name and its definition from the event data.
 	var dialogName = ev.data.name;
 	var dialogDefinition = ev.data.definition;
+	
+	// Check if the definition is from the dialog we're interested on (the Link dialog).
+	if ( dialogName == 'link' ) {
+		// FCKConfig.LinkDlgHideAdvanced = true
+		dialogDefinition.removeContents( 'advanced' );
+
+		// FCKConfig.LinkDlgHideTarget = true
+		dialogDefinition.removeContents( 'target' );
+	}
 
 	// Check if the definition is from the dialog we're interested in (the 'image' dialog).
 	//  This dialog name found using DevTools plugin
-	if ( dialogName == 'image' )
-	{
+	if ( dialogName == 'image' ){
 		// Remove the 'Link' and 'Advanced' tabs from the 'Image' dialog.
-		// dialogDefinition.removeContents( 'link' );
-		// dialogDefinition.removeContents( 'advanced' );
+		dialogDefinition.removeContents( 'Link' );
+		dialogDefinition.removeContents( 'advanced' );
 
 		// Get a reference to the 'Image Info' tab.
 		var infoTab = dialogDefinition.getContents( 'info' );
@@ -36,6 +44,6 @@ CKEDITOR.on( 'dialogDefinition', function( ev ) {
 		// Remove unnecessary widgets/elements from the 'Image Info' tab.         
 		infoTab.remove( 'txtHSpace');
 		infoTab.remove( 'txtVSpace');
-		infoTab.remove( 'width');
 	}
+
 });
