@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130723004152) do
+ActiveRecord::Schema.define(:version => 20130723042841) do
 
   create_table "artworks", :force => true do |t|
     t.string   "title"
@@ -35,10 +35,8 @@ ActiveRecord::Schema.define(:version => 20130723004152) do
   create_table "blogs", :force => true do |t|
     t.string   "title"
     t.text     "post"
-    t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "position"
   end
 
   create_table "categories", :force => true do |t|
@@ -65,11 +63,6 @@ ActiveRecord::Schema.define(:version => 20130723004152) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
-
-  create_table "jerkblogs", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
   create_table "media", :force => true do |t|
     t.string   "name"

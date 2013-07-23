@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
 
   def index
-    @blogs = Blog.order("position")
+    @blogs = Blog.all.reverse
   end
 
   def show
