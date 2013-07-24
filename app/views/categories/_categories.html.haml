@@ -1,2 +1,3 @@
 - Category.order("position").reverse.each do |category|
-  %li= link_to category.name, category
+  -if !category.hidden
+    %li= link_to category.name, category

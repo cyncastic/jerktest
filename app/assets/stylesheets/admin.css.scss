@@ -113,12 +113,13 @@ form{
 /*-Tables-*/
 
 .admintable{
+  font-size: .8em;
   width: 100%;
   background-color: #ddd;
   border: 3px darken($admin, 10) solid; 
   margin-bottom: 1.5em;
   th, td{
-    padding: .75em;
+    padding: .25em;
   }
   th{
     background-color: #ccc;
@@ -137,7 +138,6 @@ form{
     }
   }
   td{
-    padding: 10px;
     color: #000;
     vertical-align: middle;
     border-bottom: 1px darken($admin, 35) dashed;
@@ -160,7 +160,8 @@ form{
 }
 
 a.btn{
-  padding: .5em 0;
+  font-size: .8em;
+  padding: .25em 0;
   border-radius: .25em;
   font-weight: bold;
   background-color: #ccc;
