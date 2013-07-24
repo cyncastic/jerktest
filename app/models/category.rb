@@ -1,7 +1,7 @@
 class Category < ActiveRecord::Base
-  attr_accessible :colour, :hidden, :name
+  attr_accessible :hidden, :name
 
-  validates :colour, :name, presence: true
+  validates :name, presence: true
 
   has_many :artworks
 
@@ -9,13 +9,13 @@ class Category < ActiveRecord::Base
 
   private
   
-    def ensure_category_has_no_artwork
-		if artworks.empty?
-			return true 
-		else
-			errors.add(:base, 'Line Items present')
-			return false
-		end
-    end
+  def ensure_category_has_no_artwork
+  	if artworks.empty?
+  		return true 
+  	else
+  		errors.add(:base, 'Line Items present')
+  		return false
+  	end
+  end
 
 end
