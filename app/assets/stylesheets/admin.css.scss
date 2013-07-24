@@ -177,7 +177,21 @@ a.btn{
 
 
 
-
+#adminpage{
+  h2{
+    margin-left: 0.75em;
+  }
+  #logout{
+    text-align: right;
+    margin-left: 0;
+    a{
+      color: $yellow;
+      &:hover{
+        color: lighten($yellow, 20);
+      }
+    }
+  }
+}
 
 
 
