@@ -3,10 +3,6 @@ class MediaController < ApplicationController
     @media = Medium.all
   end
 
-  def show
-    @medium = Medium.find(params[:id])
-  end
-
   def new
     @medium = Medium.new
   end
@@ -20,7 +16,7 @@ class MediaController < ApplicationController
 
     respond_to do |format|
       if @medium.save
-        format.html { redirect_to @medium, notice: 'Medium was successfully created.' }
+        format.html { redirect_to media_url, notice: 'Medium was successfully created.' }
       else
         format.html { render action: "new" }
       end

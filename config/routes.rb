@@ -6,8 +6,10 @@ JerkTest::Application.routes.draw do
   get 'contact' => 'static#contact'
   get 'test' => 'static#test'
 
-  resources :media, :users, :blogs, :blog_images
+  resources :users, :blogs, :blog_images
   
+  resources :media, except: :show
+
   resources :artworks do
     collection{ post :sort }
   end
