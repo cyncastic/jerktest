@@ -11,7 +11,8 @@ JerkTest::Application.routes.draw do
   resources :artworks do
     collection{ post :sort }
   end
-  
+
+
   resources :categories do
     collection{ post :sort }
   end

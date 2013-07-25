@@ -198,7 +198,15 @@ a.btn{
 
 
 
-
+ul#categoryselectlist{
+  margin: 0 0 1.5em 0;
+  padding:0;
+  list-style: none;
+  li{
+    display: inline-block;
+    margin-left: 1em;
+  }
+}
 
 
 

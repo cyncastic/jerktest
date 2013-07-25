@@ -2,7 +2,7 @@
 %html
   %head
     %title JerkTest
-    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    "application", media: 'all'
     = javascript_include_tag "application"
     = csrf_meta_tags
     %link{ href: 'https://fonts.googleapis.com/css?family=Pontano+Sans', rel: 'stylesheet', type: 'text/css' }
@@ -15,7 +15,7 @@
           = render '/categories/categories'
           %li= link_to 'Home', root_path
 
-    %div.container_5.clearfix{ :role => "main" }
+    %div.container_5.clearfix{ role: 'main' }
       = yield
 
     - if session[:user_id]
