@@ -22,7 +22,7 @@
         %td= artwork.title
         %td= artwork.category.name
         %td= artwork.medium
-        %td= artwork.length.to_s + " x " +artwork.width.to_s
+        %td= artwork.width.to_s + " x " +artwork.length.to_s
         %td= artwork.year
         %td.actions
           = link_to 'Edit', edit_artwork_path(artwork)

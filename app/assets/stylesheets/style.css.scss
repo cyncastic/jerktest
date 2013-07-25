@@ -64,13 +64,13 @@ $green: #b9d548;
 $yellow: #fdf235;
 
 body{
-  background: #111; 
+  background: #000; 
   font-family: 'Pontano Sans', sans-serif;
   color: white;
 }
 
 #pgheader{
-  margin-top: 0; margin-bottom: 0.5em; 
+  margin-top: 0; margin-bottom: 2em; 
   height: 2.5em; 
   background: url('/assets/header.png') no-repeat;
   h1{
