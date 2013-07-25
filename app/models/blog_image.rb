@@ -7,7 +7,7 @@ class BlogImage < ActiveRecord::Base
 
   validates :image, presence: true
 
-  mount_uploader :image, UpjerkblogUploader
+  mount_uploader :image, UpjerkUploader
 
   def crop_avatar
     img_url.recreate_versions! if crop_x.present?

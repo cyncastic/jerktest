@@ -1,4 +1,5 @@
 class BlogImagesController < ApplicationController
+  layout false
   def index
     @blog_images = BlogImage.all
     @blog_image = BlogImage.new

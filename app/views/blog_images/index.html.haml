@@ -1,24 +1,16 @@
-%h1 Blog Images
+!!!5
+%html
+  %head
+    %link{ href: '/assets/grid.css', media: 'all', rel: 'stylesheet', type: 'text/css'}
+    %link{ href: '/assets/style.css', media: 'all', rel: 'stylesheet', type: 'text/css'}
+  %body.container_5
+    %h1 Blog Images
 
-= render 'form'
-
-/ %table.admintable
-/   %tr
-/     %th Image
-/     %th
-
-/   - @blog_images.each do |blog_image|
-/     %tr
-/       %td= blog_image.image.to_s.split('/')[-1]
-/       %td.actions
-/         = link_to 'Show', blog_image
-/         = link_to 'Edit', edit_blog_image_path(blog_image)
-/         = link_to 'Destroy', blog_image, method: :delete, data: { confirm: 'Are you sure?' }
-
-%ul{ :id => "images" }
-  - @blog_images.each do |blog_image|
-    %li{ :class => "grid_1"}
-      %a{ :class => "fancy", 
-          :rel => "group1",
-          :href => blog_image.image }
-        =image_tag blog_image.image.to_s
+    = render 'form'
+    %br
+    %br
+    %ul#images
+      - @blog_images.each do |blog_image|
+        %li{ :class => "grid_1"}
+          %a{ class: 'fancy', rel: 'group1', href: blog_image.image }
+            =image_tag blog_image.image_url(:thumb).to_s

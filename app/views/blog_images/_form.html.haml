@@ -8,8 +8,8 @@
         - @blog_image.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :image, class: 'grid_1 alpha'
-    = f.file_field :image, class: 'grid_4 omega'
-  .actions
-    = f.submit class: 'grid_1 push_4'
+  .field.grid_4
+    = f.label :image
+    = f.file_field :image
+  .actions.grid_1
+    = f.submit
