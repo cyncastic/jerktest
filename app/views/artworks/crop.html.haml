@@ -2,10 +2,8 @@
 
 .crop-holder.grid_5
   = image_tag @artwork.img_url_url(:large), id: "cropbox"
-
-%h4 preview  
-%div{ :style => "width:180px; height:180px; overflow:hidden" }
-  = image_tag @artwork.img_url_url(:large), :id => "preview"
+  #crop-preview{ :style => "width:180px; height:180px; overflow:hidden" }
+    = image_tag @artwork.img_url_url(:large), :id => "preview"
 
 = form_for @artwork do |f|
   - %w[x y w h].each do |attribute|
