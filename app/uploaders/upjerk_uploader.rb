@@ -6,7 +6,7 @@ class UpjerkUploader < CarrierWave::Uploader::Base
 
   def store_dir
     Rails.env.production? ? (primary_folder = "production") : (primary_folder = "test")
-    "uploads/#{primary_folder}/#{model.class.to_s.underscore}/#{model.category.name.to_s.underscore}/"
+    "uploads/#{primary_folder}/#{model.class.to_s.underscore}/"
   end
 
   version :large do

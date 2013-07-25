@@ -130,11 +130,6 @@ form{
   tr{
     &:hover{
       background-color: #eee;
-      td{
-        a:hover{
-          color: lighten($admin, 45);
-        }
-      }
     }
   }
   td{
@@ -149,10 +144,10 @@ form{
       a{
         text-transform: uppercase;
         text-decoration: none;
-        margin-left: 1em;
+        margin-left: .25em;
         color: $admin;
         &:hover{
-          color: #fff;
+          color: darken($admin, 20);
         }
       }
     }
