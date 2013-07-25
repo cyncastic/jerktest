@@ -1,3 +1,13 @@
+#fb-root
+:javascript
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
 %p#notice= notice
 
 %article.container_5.clearfix.post
@@ -9,8 +19,7 @@
       %time= @blog.created_at.strftime("%d %b. %Y")
   %div.grid_5= raw(@blog.post)
   %footer.grid_5
-    %ul
-      %li Post to Facebook
+    <div class="fb-like" data-href=#{ blog_url } data-send="false" data-layout="button_count" data-font="lucida grande" data-colorscheme="dark"></div>
     %ul.adminlistoptions
       - if session[:user_id]
         %li= link_to 'Edit', edit_blog_path

@@ -1,6 +1,6 @@
 %h1 create thumbnail
 
-.crop-holder{ :class => "grid_5"}
+.crop-holder.grid_5
   = image_tag @artwork.img_url_url(:large), id: "cropbox"
 
 %h4 preview  
@@ -11,5 +11,5 @@
   - %w[x y w h].each do |attribute|
     = f.hidden_field "crop_#{attribute}"
 
-  %div{ :class => "actions"}
+  .actions
     = f.submit "Crop", :class => "push_4 grid_1"

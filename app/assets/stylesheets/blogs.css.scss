@@ -34,9 +34,16 @@ $yellow: #fdf235;
   footer{
     color: $yellow;
     ul{
+      clear: both;
       margin:0; padding: 0;
       list-style: none;
       text-align: right;
     }
   }
+}
+
+.fb-like{
+  height: 1.5em;
+  float: right; 
+  text-align: right;
 }

@@ -116,10 +116,13 @@ form{
   font-size: .8em;
   width: 100%;
   background-color: #ddd;
-  border: 3px darken($admin, 10) solid; 
+  border: 3px darken($admin, 10) solid;
   margin-bottom: 1.5em;
+  thead{
+    border-bottom: 3px darken($admin, 10) solid;
+  }
   th, td{
-    padding: .25em;
+    padding: .125em .5em;
   }
   th{
     background-color: #ccc;
@@ -144,7 +147,7 @@ form{
       a{
         text-transform: uppercase;
         text-decoration: none;
-        margin-left: .25em;
+        margin: 0 .25em;
         color: $admin;
         &:hover{
           color: darken($admin, 20);

@@ -10,7 +10,7 @@ CKEDITOR.editorConfig = function( config )
 		'/',
 		{ name: 'styles', items : [ 'Styles','Format','FontSize' ] },
 		{ name: 'colors', items : [ 'TextColor' ] },
-		{ name: 'tools', items : [ 'Maximize', 'ShowBlocks' ] }
+		{ name: 'tools', items : [ 'Maximize', 'ShowBlocks', 'Source' ] }
 	];
 	config.dialog_backgroundCoverColor = 'rgb(0, 0, 0)';
 	config.colorButton_colors = '1eb1d7,ed1d7a,b9d548,fdf235';

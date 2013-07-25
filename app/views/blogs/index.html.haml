@@ -1,3 +1,13 @@
+#fb-root
+:javascript
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
 - @blogs.each do |blog|
   %article.container_5.clearfix.post
     %header.grid_5
@@ -9,9 +19,10 @@
   
     .grid_5= raw(blog.post)
 
-    %footer.grid_5
-      %ul
-        %li Post to Facebook
+    %footer
+      <div class="fb-like" data-href=#{ blog_url(blog.id) } data-send="false" data-layout="button_count" data-font="lucida grande" data-colorscheme="dark"></div>
+
+      %ul#admin-blog
         - if session[:user_id]
           %li= link_to 'Edit', edit_blog_path(blog)
-        %li= link_to 'Destroy', blog, method: :delete, class: 'delete_btn', data: { confirm: 'Are you sure?' }
+          %li= link_to 'Destroy', blog, method: :delete, class: 'delete_btn', data: { confirm: 'Are you sure?' }
