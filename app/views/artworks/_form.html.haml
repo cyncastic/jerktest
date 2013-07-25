@@ -9,7 +9,7 @@
           %li= msg
   .field
     = f.label :category_id, class: 'grid_1 alpha'
-    = f.collection_select(:category_id, Category.all, :id, :name, { prompt: false }, { class: 'grid_1 omega' })
+    = f.collection_select(:category_id, Category.all, :id, :name, { selected: params[:category_id] }, { class: 'grid_1 omega' })
   .field
     = f.label :title, class: 'grid_1 alpha'
     = f.text_field :title, class: 'grid_4 omega'

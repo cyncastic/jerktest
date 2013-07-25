@@ -1,7 +1,7 @@
 class ArtworksController < ApplicationController
   def index
     if !params[:category_id]
-      params[:category_id] = Category.last.id
+      params[:category_id] = Category.first.id
     end
     @artworks = Category.find(params[:category_id]).artworks
     @categories = Category.order("position")
@@ -27,7 +27,7 @@ class ArtworksController < ApplicationController
       if params[:artwork][:img_url]
         render :crop
       else
-        redirect_to @artwork, notice: 'Artwork was successfully created.'
+        redirect_to artworks_path, notice: 'Artwork was successfully created.'
       end
     else
       render :new
@@ -40,7 +40,7 @@ class ArtworksController < ApplicationController
       if params[:artwork][:img_url]
         render :crop
       else
-        redirect_to @artwork, notice: 'Artwork was successfully updated.'
+        redirect_to artworks_path(category_id: @artwork.category.id), notice: 'Artwork was successfully updated.'
       end
     else
       render :edit
