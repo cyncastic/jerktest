@@ -35,6 +35,7 @@ CKEDITOR.on( 'dialogDefinition', function( ev ) {
 		// Remove the 'Link' and 'Advanced' tabs from the 'Image' dialog.
 		dialogDefinition.removeContents( 'Link' );
 		dialogDefinition.removeContents( 'advanced' );
+		dialogDefinition.removeContents( 'Upload' );
 
 		// Get a reference to the 'Image Info' tab.
 		var infoTab = dialogDefinition.getContents( 'info' );
