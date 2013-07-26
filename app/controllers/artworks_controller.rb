@@ -13,8 +13,6 @@ class ArtworksController < ApplicationController
 
   def new
     @artwork = Artwork.new
-    @media = Medium.all
-    @media = @media.map{|name| name.name}
   end
 
   def edit

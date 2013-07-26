@@ -25,7 +25,7 @@
         %td= artwork.width.to_s + " x " +artwork.length.to_s
         %td= artwork.year
         %td.actions
-          = link_to 'Edit', edit_artwork_path(artwork)
+          = link_to 'Edit', edit_artwork_path(artwork, category_id: params[:category_id])
           = link_to 'Destroy', artwork, method: :delete, class: "delete_btn", data: { confirm: 'Are you sure?', remote: true }
 
 = link_to 'New Artwork', new_artwork_path(category_id: params[:category_id]), :class => "push_4 grid_1 btn"
