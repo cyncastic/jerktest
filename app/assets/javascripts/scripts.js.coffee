@@ -33,3 +33,8 @@ $ ->
   $(".delete_btn").bind "ajax:success", ->
     $(this).closest("tr").fadeOut()
 
+
+
+
+$(".sortable").sortable
+$(".sortable").disableSelection
