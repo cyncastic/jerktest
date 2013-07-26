@@ -195,12 +195,13 @@ a.btn{
 
 
 ul#categoryselectlist{
+  text-transform: lowercase;
   margin: 0 0 1.5em 0;
   padding:0;
   list-style: none;
   li{
     display: inline-block;
-    margin-left: 1em;
+    margin-left: .5em;
   }
   .selected{
     font-weight: bold;
