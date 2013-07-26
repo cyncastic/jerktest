@@ -1,5 +1,8 @@
 %h1 listing artworks
 
+- if notice
+  %p#notice= notice
+
 %ul#categoryselectlist
   - @categories.each do |category|
     %li
@@ -15,7 +18,7 @@
       %th Size
       %th Year
       %th
-  %tbody.sorts{ :data => { :update_url => sort_artworks_url } }
+  %tbody.sorts{ :data => { update_url: sort_artworks_url } }
     - @artworks.each do |artwork|
       = content_tag_for :tr, artwork do
         %td= image_tag artwork.img_url_url(:icon).to_s
@@ -26,6 +29,6 @@
         %td= artwork.year
         %td.actions
           = link_to 'Edit', edit_artwork_path(artwork, category_id: params[:category_id])
-          = link_to 'Destroy', artwork, method: :delete, class: "delete_btn", data: { confirm: 'Are you sure?', remote: true }
+          = link_to 'Destroy', artwork, method: :delete, class: 'delete_btn', data: { confirm: 'Are you sure?', remote: true }
 
-= link_to 'New Artwork', new_artwork_path(category_id: params[:category_id]), :class => "push_4 grid_1 btn"
+= link_to 'New Artwork', new_artwork_path(category_id: params[:category_id]), class: 'push_4 grid_1 btn'
