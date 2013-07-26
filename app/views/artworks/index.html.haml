@@ -3,7 +3,7 @@
 %ul#categoryselectlist
   - @categories.each do |category|
     %li
-      =link_to category.name, artworks_path(category_id: category.id)
+      %a{ href: artworks_path(category_id: category.id) }=category.name
 
 %table.admintable
   %thead
@@ -19,7 +19,7 @@
     - @artworks.each do |artwork|
       = content_tag_for :tr, artwork do
         %td= image_tag artwork.img_url_url(:icon).to_s
-        %td= artwork.title
+        %td= link_to artwork.title, artwork
         %td= artwork.category.name
         %td= artwork.medium
         %td= artwork.width.to_s + " x " +artwork.length.to_s

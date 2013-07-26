@@ -9,7 +9,7 @@
   %tbody{ :class => "sorts", :data => { :update_url => sort_categories_url }}
     - @categories.each do |category|
       = content_tag_for :tr, category do
-        %td= category.name
+        %td= link_to category.name, artworks_path(category_id: category.id)
         %td= category.hidden
         %td{ :class => "actions"}
           = link_to 'Edit', edit_category_path(category)

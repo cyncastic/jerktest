@@ -1,9 +1,10 @@
 class ArtworksController < ApplicationController
   def index
     if !params[:category_id]
-      params[:category_id] = Category.first.id
+      @artworks = Artwork.all
+    else
+      @artworks = Category.find(params[:category_id]).artworks.order("position")
     end
-    @artworks = Category.find(params[:category_id]).artworks.order("position")
     @categories = Category.order("position")
   end
 
