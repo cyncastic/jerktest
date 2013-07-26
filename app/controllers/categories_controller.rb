@@ -23,7 +23,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to @category, notice: 'Category was successfully created.' }
+        format.html { redirect_to artworks_path(category_id: @category.id), notice: 'Category was successfully created.' }
       else
         format.html { render action: "new" }
       end
@@ -35,7 +35,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.update_attributes(params[:category])
-        format.html { redirect_to @category, notice: 'Category was successfully updated.' }
+        format.html { redirect_to artworks_path(category_id: @category.id), notice: 'Category was successfully updated.' }
       else
         format.html { render action: "edit" }
       end

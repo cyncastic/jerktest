@@ -90,17 +90,15 @@ form{
   }
   input, select{
     background-color: #eee;
-    border: 1px solid black;
-    font-size: 1.25em;
+    border: none;
+    font-size: 1.125em;
     vertical-align: middle;
   }
 }
 
 #artwork_img_url{
-  font-size: 1em;
-  padding-top:0.25em;
-  padding-bottom:0.25em;
-  padding-left:0.125em;
+  font-size: .9em;
+  padding:0.25em;
 }
 
 
@@ -204,11 +202,10 @@ ul#categoryselectlist{
     display: inline-block;
     margin-left: 1em;
   }
+  .selected{
+    font-weight: bold;
+  }
 }
-
-
-
-
 
 #crop-preview{
   position: absolute;

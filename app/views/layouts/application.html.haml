@@ -16,7 +16,7 @@
           = render '/categories/categories'
           %li= link_to 'Home', root_path
 
-    %div.container_5.clearfix{ role: 'main' }
+    #main.container_5.clearfix{ role: 'main' }
       = yield
 
     - if session[:user_id]
@@ -28,14 +28,14 @@
             Add Content
             %ul
               %li= link_to 'Blog Entry', new_blog_path
-              %li= link_to 'New Artwork', new_artwork_path
+              %li= link_to 'Artwork', new_artwork_path
+              %li= link_to 'Category', new_category_path
           %li 
             Manage Content
             %ul
               %li= link_to 'Blog', blogs_path
-              %li= link_to 'Artwork', artworks_path
+              %li= link_to 'Artworks', artworks_path
               %li= link_to 'Categories', categories_path
-              %li= link_to 'Media', media_path
           %li
             Settings
             %ul

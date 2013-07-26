@@ -3,7 +3,7 @@ class ArtworksController < ApplicationController
     if !params[:category_id]
       params[:category_id] = Category.first.id
     end
-    @artworks = Category.find(params[:category_id]).artworks
+    @artworks = Category.find(params[:category_id]).artworks.order("position")
     @categories = Category.order("position")
   end
 

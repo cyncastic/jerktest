@@ -27,6 +27,6 @@
     = f.select :year, (2010..Time.now.year).to_a.reverse, { prompt: false }, { class: 'grid_1 omega' }
   .field
     = f.label :img_url, class: 'grid_1 alpha'
-    = f.file_field :img_url, class: 'grid_4 omega'
+    .grid_4.omega= f.file_field :img_url
   .actions
     = f.submit class: 'grid_1 push_4'
