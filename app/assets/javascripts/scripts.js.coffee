@@ -24,17 +24,7 @@ $ ->
 	      $.post($(this).data('update-url'), $(this).sortable('serialize'))
 	    helper: fixHelper
 
-# Auto complete for medium textfield
-$ ->
-  $("#mediumtxt").autocomplete source: $("#mediumtxt").data('auto-complete-source')
-
 # Fadeout deleted entries
 $ ->
   $(".delete_btn").bind "ajax:success", ->
     $(this).closest("tr").fadeOut()
-
-
-
-
-$(".sortable").sortable
-$(".sortable").disableSelection

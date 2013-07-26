@@ -15,7 +15,6 @@
       %th Size
       %th Year
       %th
-      %th
   %tbody.sorts{ :data => { :update_url => sort_artworks_url } }
     - @artworks.each do |artwork|
       = content_tag_for :tr, artwork do
@@ -25,7 +24,6 @@
         %td= artwork.medium
         %td= artwork.width.to_s + " x " +artwork.length.to_s
         %td= artwork.year
-        %td= artwork.position
         %td.actions
           = link_to 'Edit', edit_artwork_path(artwork)
           = link_to 'Destroy', artwork, method: :delete, class: "delete_btn", data: { confirm: 'Are you sure?', remote: true }
