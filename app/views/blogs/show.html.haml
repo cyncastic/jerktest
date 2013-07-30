@@ -1,3 +1,21 @@
+- if notice
+  %p#notice= notice
+
+%article.container_5.clearfix.post
+  %header.grid_5
+    %h1= @blog.title
+    %p
+      Submited by
+      %a Jerk
+      %time= @blog.posted.strftime("%d %b. %Y")
+  %div.grid_5= raw(@blog.post)
+  %footer.grid_5
+    <div class="fb-like" data-href=#{ blog_url } data-send="false" data-layout="button_count" data-font="lucida grande" data-colorscheme="dark"></div>
+    %ul.adminlistoptions
+      - if session[:user_id]
+        %li= link_to 'Edit', edit_blog_path
+        %li= link_to 'Destroy', blog_path, method: :delete, class: "delete_btn", data: { confirm: 'Are you sure?' }
+
 #fb-root
 :javascript
   (function(d, s, id) {
@@ -7,20 +25,3 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
-
-%p#notice= notice
-
-%article.container_5.clearfix.post
-  %header.grid_5
-    %h1= @blog.title
-    %p
-      Submited by
-      %a Jerk
-      %time= @blog.created_at.strftime("%d %b. %Y")
-  %div.grid_5= raw(@blog.post)
-  %footer.grid_5
-    <div class="fb-like" data-href=#{ blog_url } data-send="false" data-layout="button_count" data-font="lucida grande" data-colorscheme="dark"></div>
-    %ul.adminlistoptions
-      - if session[:user_id]
-        %li= link_to 'Edit', edit_blog_path
-        %li= link_to 'Destroy', blog_path, method: :delete, class: "delete_btn", data: { confirm: 'Are you sure?' }

@@ -10,7 +10,10 @@
   
   .field
     = f.label :title, class: 'grid_1 alpha'
-    = f.text_field :title, class: 'grid_4 omega' 
+    = f.text_field :title, class: 'grid_4 omega'   
+  .field
+    = f.label :posted, class: 'grid_1 alpha'
+    = f.date_select :posted, class: 'grid_4 omega' 
   .field
     = f.label :post, class: 'grid_1 alpha'
     #ckeholder.grid_4.omega
