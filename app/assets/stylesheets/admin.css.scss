@@ -29,6 +29,7 @@ nav#admin{
       a{
         color: $admin;
         text-decoration: none;
+        transition: all 0.3s ease-out;
         &:hover{
           color: darken($admin, 10);
         }
@@ -129,6 +130,7 @@ form{
     text-shadow: -.1em .1em .1em white;
   }
   tr{
+    transition: all 0.3s ease-out;
     &:hover{
       background-color: #eee;
     }
@@ -141,6 +143,7 @@ form{
       text-decoration: none;
       margin: 0 .25em;
       color: $admin;
+      transition: all 0.3s ease-out;
       &:hover{
         color: darken($admin, 20);
       }
@@ -164,6 +167,7 @@ a.btn{
   color: darken($admin, 10);
   text-align: center;
   text-decoration: none;
+  transition: all 0.3s ease-out;
   &:hover{
     background-color: #ddd;
     color: $admin;
@@ -183,6 +187,7 @@ a.btn{
     margin-left: 0;
     a{
       color: $yellow;
+      transition: all 0.3s ease-out;
       &:hover{
         color: lighten($yellow, 20);
       }
