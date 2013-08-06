@@ -1,5 +1,5 @@
 %ul#images.sortable
   - @artworks.each do |artwork|
     %li.grid_1
-      %a.fancy{ href: artwork.img_url }
+      %a.fancy{ href: artwork.img_url, data: { title: artwork.title } }
         =image_tag artwork.img_url_url(:thumb).to_s
