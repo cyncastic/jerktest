@@ -65,7 +65,7 @@ $yellow: #fdf235;
 
 body{
   background: #000; 
-  font-family: 'Pontano Sans', sans-serif;
+  font-family: 'Pontano Sans', Helvetica sans-serif;
   color: white;
 }
 
@@ -85,19 +85,23 @@ body{
     text-decoration: none; 
     text-align: right;
     text-transform: lowercase;
-    color: #ffffff; 
     transition: all 0.1s ease-out;
+    color: #fff;
   }
 }
-#main-navigation ul li:nth-child(4n+1) a:hover{ color: $blue; }
-#main-navigation ul li:nth-child(4n+2) a:hover{ color: $green; }
-#main-navigation ul li:nth-child(4n+3) a:hover{ color: $pink;  }
-#main-navigation ul li:nth-child(4n+4) a:hover{ color: $yellow; }
 
 
-#main{
-  margin-bottom: 3em;
-}
+
+#main-navigation ul:hover li:nth-child(4n+1) a:hover{ color: $blue; }
+#main-navigation ul:hover li:nth-child(4n+2) a:hover{ color: $green; }
+#main-navigation ul:hover li:nth-child(4n+3) a:hover{ color: $pink;  }
+#main-navigation ul:hover li:nth-child(4n+4) a:hover{ color: $yellow; }
+
+
+
+
+
+#main{ margin-bottom: 3em; }
 
 ul#images{
   margin: 0; padding: 0; 

@@ -14,6 +14,11 @@
 /log/*.log
 /tmp
 
-.DS_STORE
+# OS generated files #
+######################
+*/.DS_Store
+.DS_Store
+.DS_Store?
+
 
 /doc
