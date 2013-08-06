@@ -26,6 +26,7 @@ $yellow: #fdf235;
   position: relative;
   &::before{
     content: attr(data-title);
+    word-wrap: break-word;
     display: block;
     width: 100%;
     position: absolute;
