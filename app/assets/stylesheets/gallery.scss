@@ -18,30 +18,30 @@ $yellow: #fdf235;
   }
 }
 
+.grid_1{ vertical-align: middle; }
+
 .fancy{
   box-shadow: inset 0 0 0 #000;
   width: 180px; height: 180px;
   display: block;
-  overflow: hidden;
   position: relative;
   &::before{
     content: attr(data-title);
-    word-wrap: break-word;
-    display: block;
-    width: 100%;
-    position: absolute;
+    width: 160px;
+    padding: 0 10px;
     text-align: center;
-    font-size: 1.25em;
-    line-height:7em;
-    opacity: 0;
-    color: white;
+    font-size: 1.125em;
+    opacity: 1;
+    font-weight: bold;
     text-transform: lowercase;
-
+    position: absolute;
+    bottom: 10px;
+    opacity: 0;
   }
   &:hover{
-    box-shadow: inset 0 0 180px #000,  inset 0 0 15px #000;
+    box-shadow: inset 0 0 180px #000,  inset 0 0 45px #000,  inset 0 0 30px #000,  inset 0 0 5px #000;
     img{
-      opacity: .25;
+      opacity: .45;
     }
     &::before{
       opacity: 1;
@@ -54,8 +54,7 @@ $yellow: #fdf235;
 }
 
 
-
-#images li:nth-child(4n+1) a:before{ color: $blue; }
-#images li:nth-child(4n+2) a:before{ color: $green; }
-#images li:nth-child(4n+3) a:before{ color: $pink;  }
+#images li:nth-child(4n+1) a:before{ color: $blue;   }
+#images li:nth-child(4n+2) a:before{ color: $green;  }
+#images li:nth-child(4n+3) a:before{ color: $pink;   }
 #images li:nth-child(4n+4) a:before{ color: $yellow; }
