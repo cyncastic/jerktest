@@ -20,7 +20,7 @@ $yellow: #fdf235;
 
 .grid_1{ vertical-align: middle; }
 
-.fancy{
+.jerkbox{
   box-shadow: inset 0 0 0 #000;
   width: 180px; height: 180px;
   display: block;
@@ -33,8 +33,57 @@ $yellow: #fdf235;
   }
 }
 
-
 #images li:nth-child(4n+1) a:before{ color: $blue;   }
 #images li:nth-child(4n+2) a:before{ color: $green;  }
 #images li:nth-child(4n+3) a:before{ color: $pink;   }
 #images li:nth-child(4n+4) a:before{ color: $yellow; }
+
+#lightbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,.6667);
+  img {
+    box-shadow:0 0 25px #000, 0 0 25px #000;
+    max-width:940px;
+    max-height: 90%;
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
