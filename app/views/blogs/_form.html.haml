@@ -16,16 +16,6 @@
     = f.date_select :posted, class: 'grid_4 omega' 
   .field
     = f.label :post, class: 'grid_1 alpha'
-    #ckeholder.grid_4.omega
-      = f.text_area :post, id: 'editor1'
+    = f.text_area :post, class: 'grid_4 omega' 
   .actions
     = f.submit class: 'grid_1 push_4'
-
-  :javascript
-    CKEDITOR.replace( 'editor1', {
-      filebrowserBrowseUrl: '/blog_images',
-      filebrowserImageBrowseUrl: '/blog_images',
-      filebrowserUploadUrl: 'blog_images',
-      filebrowserImageUploadUrl: 'blog_images',
-      customConfig : '/assets/ckeditor_config.js'
-    });

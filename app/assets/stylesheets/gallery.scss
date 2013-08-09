@@ -3,10 +3,6 @@ $pink: #ed1d7a;
 $green: #b9d548;
 $yellow: #fdf235;
 
-*, *::before, *::after{
-  -webkit-transition: all .3333s cubic-bezier(0.42,0.9,0.58,1);
-          transition: all .3333s cubic-bezier(0.42,0.9,0.58,1);
-}
 
 #images{
   margin: 0; padding: 0; 

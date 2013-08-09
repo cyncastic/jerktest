@@ -7,8 +7,6 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
-gem 'ckeditor'
-gem 'mini_magick'
 gem 'carrierwave'
 gem 'rmagick', '2.13.2'
 gem 'fog', '~> 1.10.1'
