@@ -24,7 +24,7 @@
     = f.number_field :length, class: 'grid_1 omega'
   .field
     = f.label :year, class: 'grid_1 alpha'
-    = f.select :year, (2010..Time.now.year).to_a.reverse, { prompt: false }, { class: 'grid_1 omega' }
+    = f.select :year, (2000..Time.now.year).to_a.reverse, { prompt: false }, { class: 'grid_1 omega' }
   .field
     = f.label :img_url, class: 'grid_1 alpha'
     .grid_4.omega= f.file_field :img_url
