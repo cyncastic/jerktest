@@ -8,7 +8,6 @@ class Artwork < ActiveRecord::Base
   after_update :crop_avatar
 
   validates :title, :medium, :img_url, :category_id, presence: true
-  validates :length, :width, numericality: { greater_than_or_equal_to: 1 }
 
   mount_uploader :img_url, UpjerkUploader
 
