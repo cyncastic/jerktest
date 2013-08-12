@@ -24,6 +24,4 @@ JerkTest::Application.routes.draw do
     delete 'logout' => :destroy
   end
   
-  mount Ckeditor::Engine => '/ckeditor'
-
 end
