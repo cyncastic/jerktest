@@ -20,6 +20,12 @@ nav#admin{
   border-left: none;
   border-bottom-right-radius: 3em;
   border-top-right-radius: 1em;
+  
+  transition: left 0.33s ease-in-out;
+
+  &:hover{
+    left: 0;
+  }
 
   ul{
     list-style: none;
@@ -29,7 +35,7 @@ nav#admin{
       a{
         color: $admin;
         text-decoration: none;
-        transition: all 0.3s ease-out;
+        transition: color 0.3s ease-out;
         &:hover{
           color: darken($admin, 10);
         }

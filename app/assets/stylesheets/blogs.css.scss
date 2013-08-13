@@ -11,6 +11,7 @@ $yellow: #fdf235;
   a{
     color: $pink;
     text-decoration: none;
+    transition: color 0.3s ease-out;
     &:hover{ 
       color: lighten($pink, 20);
     }

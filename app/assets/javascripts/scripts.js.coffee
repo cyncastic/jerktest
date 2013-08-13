@@ -1,10 +1,3 @@
-# hover animatin for artworks
-$ ->
-  $("#admin").hover (->
-    $(this).stop().animate left: "0"
-  ), ->
-    $(this).stop().animate left: "-180"
-
 # Sortable tables
 $ ->
 	fixHelper = (e, ui) ->
