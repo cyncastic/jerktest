@@ -4,4 +4,7 @@ class Blog < ActiveRecord::Base
   validates :title, :post, presence: true
 
   belongs_to :user
+
+  mount_uploader :image, UpjerkblogUploader
+
 end

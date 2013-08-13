@@ -9,6 +9,9 @@
           %li= msg
   
   .field
+    = f.label :image, class: 'grid_1 alpha'
+    .grid_4.omega= f.file_field :image
+  .field
     = f.label :title, class: 'grid_1 alpha'
     = f.text_field :title, class: 'grid_4 omega'   
   .field
