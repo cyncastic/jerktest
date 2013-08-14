@@ -6,7 +6,7 @@ $ ->
 	    $(this).height $(this).height()
 	  ui
 
-	$("tbody.sorts").sortable
+	$('tbody.sorts').sortable
 	    axis: 'y'
 	    update: ->
 	      $.post($(this).data('update-url'), $(this).sortable('serialize'))
@@ -14,5 +14,17 @@ $ ->
 
 # Fadeout deleted entries
 $ ->
-  $(".delete_btn").bind "ajax:success", ->
+  $('.delete_btn').bind 'ajax:success', ->
     $(this).closest("tr").fadeOut()
+
+
+# Set the jerkboxes
+$ ->
+	$('a.jerkbox').slimbox
+    overlayOpacity: 0.9,
+    captionAnimationDuration: 0,
+    counterText: null,
+    closeKeys: [27, 70],
+    nextKeys: [39, 83]
+  , (el)->
+  	[el.href, 'asdfadf', 'asdfsadfasdf']
