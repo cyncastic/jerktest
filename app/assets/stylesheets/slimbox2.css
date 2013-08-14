@@ -57,10 +57,11 @@
 #lbBottom {
 	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
 	font-size: 1em;
-	color: #1eb1d7;
+	color: #fff;
 	line-height: 1.4em;
 	text-align: center;
 	border: 10px solid 000;
+	margin-bottom: 10px;
 	border-top-style: none;
 }
 
