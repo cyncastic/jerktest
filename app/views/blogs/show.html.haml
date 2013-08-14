@@ -8,6 +8,7 @@
       Submited by
       %a Jerk
       %time= @blog.posted.strftime("%d %b. %Y")
+  .grid_5= image_tag @blog.image_url(:large).to_s
   %div.grid_5= raw(@blog.post)
   %footer.grid_5
     <div class="fb-like" data-href=#{ blog_url } data-send="false" data-layout="button_count" data-font="lucida grande" data-colorscheme="dark"></div>
