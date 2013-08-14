@@ -8,6 +8,9 @@ $yellow: #fdf235;
   margin-bottom: 1.4em;
   padding-bottom: 1.4em;
   border-bottom: 0.2em dashed darken($pink, 10);
+  img{
+    margin-bottom: 1.5em;
+  }
   a{
     color: $pink;
     text-decoration: none;
