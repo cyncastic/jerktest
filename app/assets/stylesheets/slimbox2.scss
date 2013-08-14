@@ -37,7 +37,7 @@
 	width: 20%;
 	outline: none;
 	opacity: 0;
-	transition: opacity .33s ease-in;
+	transition: opacity .2s ease-in;
 	&:hover{
 		opacity: 1;
 	}
@@ -46,15 +46,11 @@
 #lbPrevLink {
 	left: 0;
 	background: transparent url(prevlabel.gif) no-repeat 0 15%;
-  &:hover {
-	}
 }
 
 #lbNextLink {
 	right: 0;
 	background: transparent url(nextlabel.gif) no-repeat 100% 15%;
-	&:hover {
-	}
 }
 
 #lbBottom {
