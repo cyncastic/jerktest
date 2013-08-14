@@ -22,9 +22,10 @@ $ ->
 $ ->
 	$('a.jerkbox').slimbox
     overlayOpacity: 0.9,
-    captionAnimationDuration: 0,
+    captionAnimationDuration: 250,
     counterText: null,
     closeKeys: [27, 70],
     nextKeys: [39, 83]
   , (el)->
-  	[el.href, 'asdfadf', 'asdfsadfasdf']
+  	[el.href, $(el).data('title') + '<br />' + $(el).data('medium') + '<br />' + $(el).data('year') + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + $(el).data('length') + 'x' + $(el).data('width')]
+
