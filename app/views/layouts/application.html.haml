@@ -12,9 +12,9 @@
       %nav#main-navigation.grid_5
         %ul
           %li= link_to 'Store', 'http://jerkface.bigcartel.com/'
-          %li= link_to 'Contact', contact_path
+          %li= link_to 'Contact', contact_path, class: cp(contact_path)
           = render '/categories/categories'
-          %li= link_to 'Blog', root_path
+          %li= link_to 'Blog', root_path, class: cp(root_path)
 
     #main.container_5.clearfix{ role: 'main' }
       = yield

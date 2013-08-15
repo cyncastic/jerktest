@@ -88,14 +88,18 @@ body{
     color: #fff;
     transition: all 0.2s ease-out;
   }
+  &:nth-child(4n+1) a:hover,
+  &:nth-child(4n+1) a.current{ color: $blue; }
+  &:nth-child(4n+2) a:hover,
+  &:nth-child(4n+2) a.current{ color: $green; }
+  &:nth-child(4n+3) a:hover,
+  &:nth-child(4n+3) a.current{ color: $pink;  }
+  &:nth-child(4n+4) a:hover,
+  &:nth-child(4n+4) a.current{ color: $yellow; }
 }
 
 
 
-#main-navigation ul:hover li:nth-child(4n+1) a:hover{ color: $blue; }
-#main-navigation ul:hover li:nth-child(4n+2) a:hover{ color: $green; }
-#main-navigation ul:hover li:nth-child(4n+3) a:hover{ color: $pink;  }
-#main-navigation ul:hover li:nth-child(4n+4) a:hover{ color: $yellow; }
 
 
 
