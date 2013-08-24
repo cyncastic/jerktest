@@ -10,7 +10,7 @@
         %a Jerk
         %time= blog.posted.strftime("%d %b. %Y")
     .grid_5
-       %img{ src: blog.image_url(:large).to_s, alt: blog.title }
+      %img{ src: blog.image_url(:large).to_s, alt: blog.title }
     .grid_5= raw(blog.post)
     %footer
       <div class="fb-like" data-href=#{ blog_url(blog.id) } data-send="false" data-layout="button_count" data-font="lucida grande" data-colorscheme="dark"></div>
