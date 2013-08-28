@@ -28,4 +28,3 @@ $ ->
     nextKeys: [39, 83]
   , (el)->
   	[el.href, $(el).data('title') + '<br />' + $(el).data('medium') + '<br />' + $(el).data('year') + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + $(el).data('length') + 'x' + $(el).data('width')]
-

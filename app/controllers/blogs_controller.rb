@@ -2,7 +2,7 @@ class BlogsController < ApplicationController
   skip_before_filter :authorize, only: [:index, :show]
 
   def index
-    @blogs = Blog.order('posted').reverse
+    @blogs = Blog.descposted.page(params[:page])
   end
 
   def show
