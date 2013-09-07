@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130812200629) do
+ActiveRecord::Schema.define(:version => 20130907003336) do
 
   create_table "artworks", :force => true do |t|
     t.string   "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20130812200629) do
     t.datetime "updated_at",                 :null => false
     t.integer  "category_id"
     t.integer  "position",    :default => 0
+    t.boolean  "sold"
   end
 
   create_table "blog_images", :force => true do |t|

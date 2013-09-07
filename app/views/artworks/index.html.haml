@@ -22,7 +22,9 @@
     - @artworks.each do |artwork|
       = content_tag_for :tr, artwork do
         %td= image_tag artwork.img_url_url(:icon).to_s
-        %td= link_to artwork.title, artwork
+        %td
+          = raw "<span class='sold'>&bull;</span>" if artwork.sold
+          = link_to artwork.title, artwork
         %td= artwork.category.name
         %td= artwork.medium
         %td= artwork.width.to_s + " x " +artwork.length.to_s
