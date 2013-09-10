@@ -37,13 +37,9 @@ $yellow: #fdf235;
 
 
 #lbCaption .sold:before{
-  content: '•';
+  content: '• ';
   color: red;
-  display: inline-block;
-  position: absolute;
-  margin-left: -1em;
 }
-
 
 
 
