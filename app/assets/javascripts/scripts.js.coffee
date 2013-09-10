@@ -28,11 +28,10 @@ $ ->
     nextKeys: [39, 83]
   , (el)->
       if typeof $(el).attr('data-sold') isnt 'undefined'
-        myText = "<span class='sold'>&bull;</span>"
+        myTitle = "<span class='sold'>" + $(el).data('title') + "</span>"
       else
-        myText = ""
-      [el.href, myText + 
-                $(el).data('title') + '<br />' + 
+        myTitle = $(el).data('title')
+      [el.href, myTitle + '<br />' + 
                 $(el).data('medium') + '<br />' + 
                 $(el).data('year') + 
                 '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + 

@@ -35,41 +35,14 @@ $yellow: #fdf235;
 #images li:nth-child(4n+3) a:before{ color: $pink;   }
 #images li:nth-child(4n+4) a:before{ color: $yellow; }
 
-#lightbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,.9);
-  transition: background 1s ease-out;
-  #content{
-    text-align: center;
-    h1{
-      font-size: 1.5em;
-    }
-    p{
-      font-size: .75em;
-      line-height: .1em;
-      color: $pink;
-      background: white;
-    }
-    img {
-      max-height: 80%;
-    }
-  }
-} 
 
-
-
-.sold{
+#lbCaption .sold:before{
+  content: '•';
   color: red;
+  display: inline-block;
+  position: absolute;
+  margin-left: -1em;
 }
-
-
 
 
 
