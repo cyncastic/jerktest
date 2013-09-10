@@ -36,8 +36,3 @@ $ ->
                 $(el).data('year') + 
                 '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + 
                 $(el).data('length') + 'x' + $(el).data('width')]
-
-
-
-
-
