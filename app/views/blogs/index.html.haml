@@ -2,7 +2,7 @@
   %p#notice= notice
 
 .posts
-  =render partial: "blogs/blog", :locals => { blogs: @blogs }
+  =render partial: "blogs/blog", :collection => @blogs
 
 = link_to 'load more', blogs_path(page: @blogs.next_page), class: 'load-more-posts', remote: true
 

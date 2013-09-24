@@ -36,9 +36,14 @@ $yellow: #fdf235;
 #images li:nth-child(4n+4) a:before{ color: $yellow; }
 
 
-#lbCaption .sold:before{
-  content: '• ';
-  color: red;
+#lbCaption .sold{
+  &:before{
+    content: '• ';
+    color: red;
+    display: inline-block;
+    position: relative;
+    right: .5em;
+  }
 }
 
 
