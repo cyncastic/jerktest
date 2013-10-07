@@ -1,4 +1,4 @@
-$('.posts').append('#{escape_javascript(render partial: "blogs/blog", :collection => { blog: @blogs })}');
+$('.posts').append('#{escape_javascript(render partial: "blogs/blog", collection: @blogs)}');
 
 $('a.load-more-posts').attr('href', '#{blogs_path page: @blogs.next_page}');
 
