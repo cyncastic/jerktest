@@ -32,6 +32,7 @@ $ ->
       else
         myTitle = $(el).data('title')
       [el.href, myTitle + '<br />' + 
+                "$" + $(el).data('price') + '<br />' + 
                 $(el).data('medium') + '<br />' + 
                 $(el).data('year') + 
                 '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + 
