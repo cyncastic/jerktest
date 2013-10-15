@@ -13,6 +13,7 @@
     %tr
       %th
       %th Title
+      %th Price
       %th Category
       %th Medium
       %th Size
@@ -25,6 +26,7 @@
         %td
           = raw "<span class='sold'>&bull;</span>" if artwork.sold
           = link_to artwork.title, artwork
+        %td $#{artwork.price}
         %td= artwork.category.name
         %td= artwork.medium
         %td= artwork.width.to_s + " x " +artwork.length.to_s

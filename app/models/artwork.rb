@@ -1,7 +1,7 @@
 class Artwork < ActiveRecord::Base
   belongs_to :category
  
-  attr_accessible :img_url, :length, :medium, :title, :width, :year, :category_id, :sold
+  attr_accessible :img_url, :length, :medium, :title, :width, :year, :category_id, :sold, :price
   
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
   attr_accessible :crop_x, :crop_y, :crop_w, :crop_h

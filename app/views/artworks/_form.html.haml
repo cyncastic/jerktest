@@ -9,9 +9,12 @@
           %li= msg
   .field
     = f.label :category_id, class: 'grid_1 alpha'
-    = f.collection_select(:category_id, Category.all, :id, :name, { selected: params[:category_id] }, { class: 'grid_1 omega' })
+    = f.collection_select(:category_id, Category.all, :id, :name, { selected: params[:category_id] }, { class: 'grid_4 omega' })
   .field
-    = f.label :sold, class: 'grid_1 alpha'
+    = f.label :price, class: 'grid_1 alpha'
+    = f.number_field(:price, { class: 'grid_1' })
+  .field
+    = f.label :sold, class: 'grid_1'
     = f.check_box(:sold, { class: 'grid_1 omega' })
   .field
     = f.label :title, class: 'grid_1 alpha'
