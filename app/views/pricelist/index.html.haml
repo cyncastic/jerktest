@@ -1,0 +1,5 @@
+%ul#images.sortable
+  - @artworks.each do |artwork|
+    %li.grid_1
+      %a.jerkbox{ href: artwork.img_url_url(:large).to_s, data: { sold: artwork.sold, title: artwork.title, year: artwork.year, medium: artwork.medium, width: artwork.width.to_s, length: artwork.length.to_s } }
+        =image_tag artwork.img_url_url(:thumb).to_s, alt: artwork.title
