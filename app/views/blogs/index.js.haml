@@ -1,8 +1,8 @@
-$('.posts').append('#{escape_javascript(render partial: "blogs/blog", collection: @blogs)}');
-
-$('a.load-more-posts').attr('href', '#{blogs_path page: @blogs.next_page}');
-
-- unless @blogs.next_page
-  $('a.load-more-posts').remove();
+$('.posts').append('#{ j render(@blogs) }');
+- if @blogs.next_page
+  $('.pagination').replaceWith('#{ j will_paginate(@blogs) }');
+- else
+  $('.pagination').remove();
+- sleep 1
 
 FB.XFBML.parse();
