@@ -211,7 +211,8 @@ ul#categoryselectlist{
     display: inline-block;
     margin-left: .5em;
   }
-  .selected{
+  .current{
+    color: $yellow;
     font-weight: bold;
   }
 }
