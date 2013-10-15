@@ -6,6 +6,8 @@ JerkTest::Application.routes.draw do
   get 'contact' => 'static#contact'
   get 'test' => 'static#test'
 
+  get 'pricelist' => 'pricelist#index'
+
   resources :users, :blogs, :blog_images
   
   resources :media, except: :show
