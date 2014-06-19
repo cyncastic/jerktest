@@ -1,36 +1,34 @@
-%h1 listing artworks
+%section.admin
+  %h1 listing artworks
 
-- if notice
-  %p#notice= notice
+  %ul#categoryselectlist
+    - @categories.each do |category|
+      %li
+        %a{ href: artworks_path(category_id: category.id), class: cp(artworks_path(category_id: category.id)) }=category.name
 
-%ul#categoryselectlist
-  - @categories.each do |category|
-    %li
-      %a{ href: artworks_path(category_id: category.id), class: cp(artworks_path(category_id: category.id)) }=category.name
+  %table.admintable
+    %thead
+      %tr
+        %th
+        %th Title
+        %th Price
+        %th Medium
+        %th Size
+        %th Year
+        %th
+    %tbody.sorts{ data: { update_url: sort_artworks_url } }
+      - @artworks.each do |artwork|
+        = content_tag_for :tr, artwork do
+          %td= image_tag artwork.img_url_url(:icon).to_s
+          %td
+            = raw "<span class='sold'>&bull;</span>" if artwork.sold
+            = link_to artwork.title, artwork
+          %td $#{artwork.price}
+          %td= artwork.medium
+          %td= artwork.width.to_s + " x " +artwork.length.to_s
+          %td= artwork.year
+          %td.actions
+            = link_to 'Edit', edit_artwork_path(artwork, category_id: params[:category_id])
+            = link_to 'Destroy', artwork, method: :delete, class: 'delete_btn', data: { confirm: 'Are you sure?', remote: true }
 
-%table.admintable
-  %thead
-    %tr
-      %th
-      %th Title
-      %th Price
-      %th Medium
-      %th Size
-      %th Year
-      %th
-  %tbody.sorts{ :data => { update_url: sort_artworks_url } }
-    - @artworks.each do |artwork|
-      = content_tag_for :tr, artwork do
-        %td= image_tag artwork.img_url_url(:icon).to_s
-        %td
-          = raw "<span class='sold'>&bull;</span>" if artwork.sold
-          = link_to artwork.title, artwork
-        %td $#{artwork.price}
-        %td= artwork.medium
-        %td= artwork.width.to_s + " x " +artwork.length.to_s
-        %td= artwork.year
-        %td.actions
-          = link_to 'Edit', edit_artwork_path(artwork, category_id: params[:category_id])
-          = link_to 'Destroy', artwork, method: :delete, class: 'delete_btn', data: { confirm: 'Are you sure?', remote: true }
-
-= link_to 'New Artwork', new_artwork_path(category_id: params[:category_id]), class: 'push_4 grid_1 btn'
+  = link_to 'New Artwork', new_artwork_path(category_id: params[:category_id]), class: 'btn'

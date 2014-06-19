@@ -9,6 +9,19 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
- 
+
+$blue: #1eb1d7; 
+$pink: #ed1d7a;
+$green: #b9d548;
+$yellow: #fdf235;
+$admin: $blue;
+
+@import "bourbon";
+@import "reset";
+
+@import "layout";
+@import "admin";
+
+@import "slimbox2";
+@import "cropper";

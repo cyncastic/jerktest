@@ -1,11 +1,8 @@
-%p{ :id => "notice"}= notice
-
-%p
-  %b Name:
-  = @user.name
-
-%p
-  %b Password digest:
-  = @user.password_digest
-
-= link_to 'Edit', edit_user_path(@user)
+%section.admin
+	%p
+	  %b Name: 
+	  = @user.name
+	%p
+	  %b Password digest: 
+	  = @user.password_digest
+	= link_to 'Edit', edit_user_path(@user)

@@ -7,10 +7,8 @@
       %ul
         - @medium.errors.full_messages.each do |msg|
           %li= msg
-
   .field
-    = f.label :name, :class => "grid_1 alpha"
-    = f.text_field :name, :class => "grid_4 omega"
-
+    = f.label :name
+    = f.text_field :name
   .actions
-    = f.submit :class => "grid_1 push_4"
+    = f.submit, class: 'btn'

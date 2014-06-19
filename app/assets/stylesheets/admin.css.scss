@@ -1,35 +1,24 @@
-$blue: #1eb1d7; 
-$pink: #ed1d7a;
-$green: #b9d548;
-$yellow: #fdf235;
-
-$admin: $blue;
-
-nav#admin{
-  font-size: 1em;
+nav.admin{
   display: block;
-  width: 200px;
+  width: $cols1;
   position: fixed; 
   top: 3em; 
-  left: -180px;
+  left: -1 * $cols1 + 2*$gutter/$em;
 
   box-shadow: 0  0 40px #000;
 
   background: url('/assets/arrow.png') #ddd no-repeat center right;
-  border: 3px darken($admin, 10) solid; margin-top:-3px;
+  border: 3px darken($admin, 10) solid;
   border-left: none;
   border-bottom-right-radius: 3em;
   border-top-right-radius: 1em;
   
   transition: left 0.33s ease-in-out;
 
-  &:hover{
-    left: 0;
-  }
+  &:hover{ left: 0; }
 
   ul{
-    list-style: none;
-    margin-left: 1em;
+    margin-left: $gutter / $em;
     li{
       color: black;
       a{
@@ -40,168 +29,118 @@ nav#admin{
           color: darken($admin, 10);
         }
       }
-      li{
-        text-shadow: none;
-      }
     }
   }
 }
 
 
-#notice{
-  color: $pink;
-}
 
-.field_with_errors{
-  padding: 0.75em;
-  display: inline;
-  margin: 0; padding: 0;
-  label{
-    color: $admin;
+
+
+section.admin{
+  position: relative;
+  border-radius: 10px;
+  background: #ddd;
+  box-shadow: 0 0 .25em rgba(0,0,0,.5);
+  h1{
+    font-size: 2em;
+    line-height: 1.5em;
+    padding-left: .25em;
+    margin-bottom: .5em;
+    background: #eee;
+    color: #333;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  table{
+    font-size: 1em;
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 1.5em;
+    thead{
+      border-bottom: 2px #ccc solid;
+    }
+    th, td{
+      padding: .125em .25em;
+    }
+    th{
+      font-size: 1em;
+      color: #000;;
+      text-align: left;
+    }
+    tbody tr{
+      transition: background-color 0.3s ease-out;
+      &:hover{
+        background-color: #eee;
+      }
+    }
+    td{
+      color: #000;
+      vertical-align: middle;
+      border-bottom: 1px darken($admin, 35) dashed;
+      a{
+        text-decoration: none;
+        margin: 0 .25em;
+        color: $admin;
+        transition: color 0.3s ease-out;
+        &:hover{
+          color: darken($admin, 20);
+        }
+      }
+      img{
+        box-shadow: 0 0 2px rgba(0,0,0,.25);
+        border: 3px #eee solid;
+      }
+      &.actions{
+        text-align: right;
+        a{
+          font-size: .8em;
+          transition: color .1s ease-in-out;
+          &:hover{
+            color: red;
+          }
+        }
+      }
+    }
+    .sold{
+      color: red;
+      position: absolute;
+      margin-left: -.5em;
+    }
+  }
+  .field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: table;
   }
 }
 
 #error_explanation {
-  border: .1em solid $admin;
-  border-radius: .25em;
-  padding: 0.75px;
+  width: 100%;
+  border: 2px solid red;
+  padding: 7px;
   padding-bottom: 0;
-  margin-bottom: 1.3em;
-  background-color: black;
-  color: white;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
   h2 {
     text-align: left;
     font-weight: bold;
-    color: $pink;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px / $em;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
   }
-  ul li {
-    list-style: square;
-  }
-}
-
-
-/*-FORMS-*/
-form{
-  div{
-    &.field, &.actions {
-      display: inline-block;
-      margin-bottom: 0.5em;
-    }
-  }
-  label{ 
-    text-align: right;
-    font-size: 1.25em;
-    line-height: 1.25em;
-    margin: 0; padding:0;
-    color: $admin;
-  }
-  input, select{
-    background-color: #eee;
-    border: none;
-    font-size: 1.125em;
-    vertical-align: middle;
-  }
-}
-
-
-#artwork_img_url{
-  font-size: .9em;
-  padding:0.25em;
-}
-
-
-/*-Tables-*/
-
-.admintable{
-  font-size: .9em;
-  width: 100%;
-  background-color: #ddd;
-  border: 4px darken($admin, 10) solid;
-  margin-bottom: 1.5em;
-  thead{
-    border-bottom: 2px darken($admin, 10) solid;
-  }
-  th, td{
-    padding: .125em .25em;
-  }
-  th{
-    background-color: #ccc;
-    color: #000;;
-    text-align: left;
-    text-shadow: -.1em .1em .1em white;
-  }
-  tr{
-    transition: background-color 0.3s ease-out;
-    &:hover{
-      background-color: #eee;
-    }
-  }
-  td{
-    color: #000;
-    vertical-align: middle;
-    border-bottom: 1px darken($admin, 35) dashed;
-    a{
-      text-decoration: none;
-      margin: 0 .25em;
-      color: $admin;
-      transition: color 0.3s ease-out;
-      &:hover{
-        color: darken($admin, 20);
-      }
-    }
-    img{
-      box-shadow: 0 0 10px rgba(0,0,0,.5);
-      border: 2px #ddd solid;
-      vertical-align: middle;
-    }
-    &.actions{
-      text-align: right;
-    }
-  }
-  .sold{
-    color: red;
-    position: absolute;
-    margin-left: -.5em;
-  }
-}
-
-a.btn{
-  font-size: .8em;
-  padding: .25em 0;
-  border-radius: .25em;
-  font-weight: bold;
-  background-color: #ccc;
-  color: darken($admin, 10);
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease-out;
-  &:hover{
-    background-color: #ddd;
-    color: $admin;
-  }
-}
-
-
-
-
-
-#adminpage{
-  h2{
-    margin-left: 0.75em;
-  }
-  #logout{
-    text-align: right;
-    margin-left: 0;
-    a{
-      color: $yellow;
-      transition: all 0.3s ease-out;
-      &:hover{
-        color: lighten($yellow, 20);
-      }
+  ul{
+    margin: 0;
+    padding: 0;
+    li {
+      font-size: 2em;
+      list-style: square;
     }
   }
 }
-
 
 ul#categoryselectlist{
   text-transform: lowercase;
@@ -211,17 +150,38 @@ ul#categoryselectlist{
   li{
     display: inline-block;
     margin-left: .5em;
+    a{
+      color: #444;
+      text-decoration: none;
+      font-weight: 400;
+      &:hover{
+        color: #111;
+      }
+    }
   }
   .current{
-    color: $yellow;
-    font-weight: bold;
+    color: #000;
+    border-bottom: 2px dotted #fff;
   }
 }
 
+#notice {
+  color: green;
+  background: #fefefe;
+  padding: .5em;
+  border: 1px black solid;
+  margin-top: 1em;
+}
+
+#crop-holder{
+  display: block;
+}
 #crop-preview{
   position: absolute;
   top: 0;
   right: 0;
+  width:180px; 
+  height:180px;
+  overflow:hidden;
   border: 3px solid rgba(0,0,0,.5);
 }
-

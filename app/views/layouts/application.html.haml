@@ -2,25 +2,30 @@
 %html
   %head
     %title Jerkface NYC
+    %meta{ name: 'viewport', content: 'width=840, initial-scale=1, user-scalable=no' }
+    %link{ href: 'http://fonts.googleapis.com/css?family=Pontano+Sans', rel: 'stylesheet', type: 'text/css' }
     = stylesheet_link_tag    "application", media: 'all'
     = javascript_include_tag "application"
     = csrf_meta_tags
-    %link{ href: 'https://fonts.googleapis.com/css?family=Pontano+Sans', rel: 'stylesheet', type: 'text/css' }
 
   %body
-    %header#pgheader.container_5.clearfix
-      %nav#main-navigation.grid_5
-        %ul
-          %li= link_to 'Store', 'http://jerkface.bigcartel.com/'
-          %li= link_to 'Contact', contact_path, class: cp(contact_path)
-          = render '/categories/categories'
-          %li= link_to 'Blog', root_path, class: cp(root_path)
+    .container
+      %header.main
+        %h1 Jerkface
+        %nav.main
+          %ul
+            %li= link_to 'Store', 'http://jerkface.bigcartel.com/'
+            %li= link_to 'Contact', contact_path, class: cp(contact_path)
+            = render '/categories/categories'
+            %li= link_to 'Blog', root_path, class: cp(root_path)
 
-    #main.container_5.clearfix{ role: 'main' }
-      = yield
+      .content
+        - if notice
+          %p#notice= notice
+        = yield
 
     - if session[:user_id]
-      %nav#admin
+      %nav.admin
         %ul
           %li
             %a{ href: admin_path } Home

@@ -1,13 +1,14 @@
-%h1 create thumbnail
+%section.admin
+  %h1 create thumbnail
 
-.crop-holder.grid_5
-  = image_tag @artwork.img_url_url(:large), id: "cropbox"
-  #crop-preview{ :style => "width:180px; height:180px; overflow:hidden" }
-    = image_tag @artwork.img_url_url(:large), :id => "preview"
+  .crop-holder
+    #cropbox= image_tag @artwork.img_url_url(:large)
+    #crop-preview{ style: 'width:180px; height:180px; overflow:hidden' }
+      #preview= image_tag @artwork.img_url_url(:large)
 
-= form_for @artwork do |f|
-  - %w[x y w h].each do |attribute|
-    = f.hidden_field "crop_#{attribute}"
+  = form_for @artwork do |f|
+    - %w[x y w h].each do |attribute|
+      = f.hidden_field 'crop_#{ attribute }'
 
-  .actions
-    = f.submit "Crop", :class => "push_4 grid_1"
+    .actions
+      = f.submit 'Crop'

@@ -20,7 +20,7 @@ $ ->
 
 # Set the jerkboxes
 $ ->
-  $('a.jerkbox').slimbox
+  $('.jerkbox a').slimbox
     overlayOpacity: 0.9,
     captionAnimationDuration: 250,
     counterText: null,

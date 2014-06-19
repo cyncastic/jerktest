@@ -1,12 +1,11 @@
-%article.container_5.clearfix.post
-  %header.grid_5
+%article.post
+  %header
     %h1= link_to blog.title, blog
     %h2= blog.posted
-  .grid_5
-    %img{ src: blog.image_url(:large).to_s, alt: blog.title }
-  .grid_5= raw(blog.post)
+  %img{ src: blog.image_url(:large).to_s, alt: blog.title }
+  .post= raw(blog.post)
   %footer
-    .fb-like{ data: { href: blog_url(blog.id), send: 'false', layout: 'button_count', font: 'lucida grande', colorscheme: 'dark' } }
+    // .fb-like{ data: { href: blog_url(blog.id), send: 'false', layout: 'button_count', font: 'lucida grande', colorscheme: 'dark' } }
     - if session[:user_id]
       %ul#admin-blog
         %li= link_to 'Edit', edit_blog_path(blog)

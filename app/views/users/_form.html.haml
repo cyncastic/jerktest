@@ -2,19 +2,19 @@
   - if @user.errors.any?
     #error_explanation
       %h2
-        = pluralize(@user.errors.count, "error")
+        = pluralize(@user.errors.count, 'error')
         prohibited this user from being saved:
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :name, class: 'grid_1 alpha'
-    = f.text_field :name, class: 'grid_4 omega'
+    = f.label :name
+    = f.text_field :name
   .field
-    = f.label :password, 'Password', class: 'grid_1 alpha'
-    = f.password_field :password, class: 'grid_4 omega'
+    = f.label :password, 'Password'
+    = f.password_field :password
   .field
-    = f.label :password_confirmation, 'Confirm', class: 'grid_1 alpha'
-    = f.password_field :password_confirmation, class: 'grid_4 omega'
+    = f.label :password_confirmation, 'Confirm'
+    = f.password_field :password_confirmation
   .actions
-    = f.submit class: 'grid_1 push_4'
+    = f.submit

@@ -9,16 +9,16 @@
           %li= msg
   
   .field
-    = f.label :image, class: 'grid_1 alpha'
-    .grid_4.omega= f.file_field :image
+    = f.label :image
+    = f.file_field :image
   .field
-    = f.label :title, class: 'grid_1 alpha'
-    = f.text_field :title, class: 'grid_4 omega'   
+    = f.label :title
+    = f.text_field :title 
   .field
-    = f.label :posted, class: 'grid_1 alpha'
-    = f.date_select :posted, class: 'grid_4 omega' 
+    = f.label :posted
+    = f.date_select :posted
   .field
-    = f.label :post, class: 'grid_1 alpha'
-    = f.text_area :post, class: 'grid_4 omega' 
+    = f.label :post
+    = f.text_area :post
   .actions
-    = f.submit class: 'grid_1 push_4'
+    = f.submit

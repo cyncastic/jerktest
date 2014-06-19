@@ -1,7 +1,6 @@
-%p#notice= notice
-%img.grid_1.suffix_4{ src: @artwork.img_url_url(:thumb).to_s }
-.grid_5
-  %p= @artwork.title
-  %p= @artwork.medium 
-  %p= @artwork.length.to_s + " x " + @artwork.width.to_s
-  %p= @artwork.year
+%section.admin
+	%img{ src: @artwork.img_url_url(:thumb).to_s }
+	%p= @artwork.title
+	%p= @artwork.medium 
+	%p= @artwork.length.to_s + " x " + @artwork.width.to_s
+	%p= @artwork.year
