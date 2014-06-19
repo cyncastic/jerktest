@@ -1,0 +1,259 @@
+//---------------------------------------------------------------------------------------------
+//  FRAMESCSS
+
+  $font-size: 16px;     // Your base font-size in pixels
+  $em: $font-size / 1em;  // Shorthand for outputting ems
+
+  $column: 180px;  // The column-width of your grid in pixels
+  $gutter: 10px;  // The gutter-width of your grid in pixels
+
+  // Column-widths in variables, in ems  
+   $cols1: ( 1 * ($column + $gutter) - $gutter) / $em; //  180px
+   $cols2: ( 2 * ($column + $gutter) - $gutter) / $em; //  370px
+   $cols3: ( 3 * ($column + $gutter) - $gutter) / $em; //  560px
+   $cols4: ( 4 * ($column + $gutter) - $gutter) / $em; //  750px
+   $cols5: ( 5 * ($column + $gutter) - $gutter) / $em; //  940px
+   $cols6: ( 6 * ($column + $gutter) - $gutter) / $em; // 1130px
+   $cols7: ( 7 * ($column + $gutter) - $gutter) / $em; // 1320px
+   $cols8: ( 8 * ($column + $gutter) - $gutter) / $em; // 1510px
+   $cols9: ( 9 * ($column + $gutter) - $gutter) / $em; // 1700px
+
+  // Colors
+  $black: #110c0f;
+  $white: #f5f5f5;
+  $pink-light: #f172ae;
+  $pink-dark: #ec0075;
+
+  // Grid Background;
+  $grid-bg: 'http://s3.amazonaws.com/jerktest/static/grid-bg.gif';
+
+//---------------------------------------------------------------------------------------------
+//  TYPOGRAPHY
+  body{
+    background: #000; 
+    font-size: 16px / $em;
+    line-height: 24px / $em;
+    font-family: 'Pontano Sans', Helvetica, sans-serif;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{
+    color: $green;
+    text-decoration: none;
+    &:hover{
+      color: lighten($green, 20);
+    }
+  }
+  p{
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+  h1 {
+    color: $blue;
+    font-size: 2.369em;
+    line-height: .93317856em;
+    margin-top: 0;
+    margin-bottom: 0.63317856em;
+  }
+  h2 {
+    color: $blue;
+    font-size: 1.777em;
+    line-height: 0.844119302194713em;
+    margin-top: 0;
+    margin-bottom: 0.84411930219471em;
+  }
+  h3 {
+    font-size: 1.333em;
+    line-height: 1.12528132033008em;
+    margin-top: 0;
+    margin-bottom: 1.12528132033008em;
+  }
+  h4 {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+  h5 {
+    font-size: 0.75em;
+    line-height: 2em;
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+  h6 {
+    font-size: 0.563em;
+    line-height: 2.66429840142096em;
+    margin-top: 0;
+    margin-bottom: 2.66429840142096em;
+  }
+  ol, ul {
+    margin-top: 0em;
+    margin-bottom: 1.5em;
+  }
+  li{
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+
+  blockquote{
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 1.5em;
+    margin-left: 3em;
+    margin-bottom: 3em;
+  }
+
+//---------------------------------------------------------------------------------------------
+//  STRUCTURE
+  *, *:before, *:after { @include box-sizing(border-box); }
+  img{ vertical-align: middle; }
+
+  .container {
+    @include clearfix;  
+    //background: url($grid-bg);
+    position: relative;
+    margin:  0 auto ($gutter / $em);
+    min-width: $cols3;
+  }
+
+  header.main{
+    margin: 0 0 3em; 
+    height: 3em;
+    background: url('/assets/header.png') black no-repeat;
+    h1{ font-size: 0; margin: 0; padding: 0; }
+    nav.main ul li {
+      float: right; 
+      margin: .75em 0 0 1em;
+      a {
+        text-align: right;
+        text-transform: lowercase;
+        color: #fff;
+        transition: all 0.2s ease-out;
+        font-size: 1.25em;
+        font-weight: 200;
+      }
+      &:nth-child(4n+1) a{ &:hover, &.current{ color: $blue;   }}
+      &:nth-child(4n+2) a{ &:hover, &.current{ color: $green;  }}
+      &:nth-child(4n+3) a{ &:hover, &.current{ color: $pink;   }}
+      &:nth-child(4n+4) a{ &:hover, &.current{ color: $yellow; }}
+    }
+  }
+
+
+  .images{
+    @include clearfix;
+    margin-right: $gutter * -1;
+    .jerkbox{
+        margin: 0 ($gutter / $em) ($gutter / $em) 0; 
+        display: block;
+        float: left;
+        @include size($cols1);
+        background: $pink;
+      a{
+        //@include inline-block;
+        @include size($cols1);
+      }
+    }
+  }
+
+  .ajerkbox{
+    display: inline;
+    position: relative;
+    z-index: 100;
+    background: red;
+    a{
+      @include inline-block; font-size: 0;
+      @include size($cols1);
+      box-shadow: inset 0 0 0 #000;
+      transition: box-shadow 0.3s ease-out;
+      &:hover{
+        box-shadow: inset 0 0 45px #000;
+      }
+    }
+    img{
+      position: relative; z-index: -1;
+    }
+  }
+
+  #lbCaption{
+    .price{ color: $green; }
+    .sold::before{
+      content: '• ';
+      color: red;
+      display: inline-block;
+      position: relative;
+      right: .5em;
+    }
+  }
+  
+
+  article.post{
+    color: white;
+    margin-bottom: 1.4em;
+    padding-bottom: 1.4em;
+    border-bottom: 0.2em dashed darken($pink, 10);
+    img{
+      margin-bottom: 1.5em;
+    }
+    a{
+      color: $pink;
+      text-decoration: none;
+      transition: color .5s ease-out;
+      &:hover{ 
+        color: $blue;
+      }
+    }
+    header{
+      color: $green;
+      time{
+        color: $green;
+      }
+    }
+    footer{
+      color: $yellow;
+      ul{
+        clear: both;
+        margin:0; padding: 0;
+        list-style: none;
+        text-align: right;
+      }
+    }
+    .fb-like{
+      height: 1.5em;
+      float: right; 
+      text-align: right;
+    }
+  }
+
+// #contact-logo{ position: relative; top:50px; left: 30px;}
+// #contact-text{ color: #ddd; font-size: 12pt; margin: 0; padding: 160px 0 0 0;}
+
+// #contact-email{
+//   display: block;
+//   margin: 0; padding: 0; 
+//   color: white; 
+//   font-size: 22pt; 
+//   text-align: center;
+//   text-decoration: none;
+//   &:active { color: #ccc;}
+//   &:visited { color: #ccc;}
+//   &:hover { color: #f24b95;}
+// }
+
+// a.instagram, a.facebook{ 
+//   position: absolute; top: 136px; 
+//   height: 45px; width: 45px;
+// }
+// a.facebook{  background: url('/assets/contact/facebook.png'); left: 136px;}
+// a.instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
+
+//---------------------------------------------------------------------------------------------
+//  MEDIA QUERIES
+
+    @for $i from 3 through 9 {
+      @media screen and (min-width: ($i * ($column + $gutter) - $gutter) / $em) { 
+        .container{  width:  ($i * ($column + $gutter) - $gutter) / $em; }
+      }
+    }
