@@ -141,39 +141,28 @@
     }
   }
 
-
   .images{
-    @include clearfix;
-    margin-right: $gutter * -1;
+    margin-right: ($gutter / $em)*-1;
     .jerkbox{
-        margin: 0 ($gutter / $em) ($gutter / $em) 0; 
-        display: block;
-        float: left;
-        @include size($cols1);
-        background: $pink;
+      position: relative;
+      float: left;
+      margin-right: $gutter / $em;
+      margin-bottom: $gutter / $em;
+      display: block;
       a{
-        //@include inline-block;
+        display: block;
         @include size($cols1);
+        box-shadow: inset 0 0 0 #000;
+        transition: box-shadow 0.3s ease-out;
+        &:hover{
+          box-shadow: inset 0 0 45px #000;
+        }
+        img{
+          display: block;
+          position: relative;
+          z-index: -1;
+        }
       }
-    }
-  }
-
-  .ajerkbox{
-    display: inline;
-    position: relative;
-    z-index: 100;
-    background: red;
-    a{
-      @include inline-block; font-size: 0;
-      @include size($cols1);
-      box-shadow: inset 0 0 0 #000;
-      transition: box-shadow 0.3s ease-out;
-      &:hover{
-        box-shadow: inset 0 0 45px #000;
-      }
-    }
-    img{
-      position: relative; z-index: -1;
     }
   }
 
@@ -187,7 +176,6 @@
       right: .5em;
     }
   }
-  
 
   article.post{
     color: white;
@@ -227,27 +215,26 @@
     }
   }
 
-// #contact-logo{ position: relative; top:50px; left: 30px;}
-// #contact-text{ color: #ddd; font-size: 12pt; margin: 0; padding: 160px 0 0 0;}
+#contact-logo{ position: relative; top:50px; left: 30px;}
+#contact-text{ color: #ddd; font-size: 12pt; margin: 0; padding: 160px 0 0 0;}
+#contact-email{
+  display: block;
+  margin: 0; padding: 0; 
+  color: white; 
+  font-size: 22pt; 
+  text-align: center;
+  text-decoration: none;
+  &:active { color: #ccc;}
+  &:visited { color: #ccc;}
+  &:hover { color: #f24b95;}
+}
 
-// #contact-email{
-//   display: block;
-//   margin: 0; padding: 0; 
-//   color: white; 
-//   font-size: 22pt; 
-//   text-align: center;
-//   text-decoration: none;
-//   &:active { color: #ccc;}
-//   &:visited { color: #ccc;}
-//   &:hover { color: #f24b95;}
-// }
-
-// a.instagram, a.facebook{ 
-//   position: absolute; top: 136px; 
-//   height: 45px; width: 45px;
-// }
-// a.facebook{  background: url('/assets/contact/facebook.png'); left: 136px;}
-// a.instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
+a.instagram, a.facebook{ 
+  position: absolute; top: 136px; 
+  height: 45px; width: 45px;
+}
+a.facebook{  background: url('/assets/contact/facebook.png'); left: 136px;}
+a.instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
 
 //---------------------------------------------------------------------------------------------
 //  MEDIA QUERIES
