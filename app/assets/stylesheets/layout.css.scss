@@ -8,24 +8,32 @@
   $gutter: 10px;  // The gutter-width of your grid in pixels
 
   // Column-widths in variables, in ems  
-   $cols1: ( 1 * ($column + $gutter) - $gutter) / $em; //  180px
-   $cols2: ( 2 * ($column + $gutter) - $gutter) / $em; //  370px
-   $cols3: ( 3 * ($column + $gutter) - $gutter) / $em; //  560px
-   $cols4: ( 4 * ($column + $gutter) - $gutter) / $em; //  750px
-   $cols5: ( 5 * ($column + $gutter) - $gutter) / $em; //  940px
-   $cols6: ( 6 * ($column + $gutter) - $gutter) / $em; // 1130px
-   $cols7: ( 7 * ($column + $gutter) - $gutter) / $em; // 1320px
-   $cols8: ( 8 * ($column + $gutter) - $gutter) / $em; // 1510px
-   $cols9: ( 9 * ($column + $gutter) - $gutter) / $em; // 1700px
+    $cols1: ( 1 * ($column + $gutter) - $gutter) / $em; //  180px
+    $cols2: ( 2 * ($column + $gutter) - $gutter) / $em; //  370px
+    $cols3: ( 3 * ($column + $gutter) - $gutter) / $em; //  560px
+    $cols4: ( 4 * ($column + $gutter) - $gutter) / $em; //  750px
+    $cols5: ( 5 * ($column + $gutter) - $gutter) / $em; //  940px
+    $cols6: ( 6 * ($column + $gutter) - $gutter) / $em; // 1130px
+    $cols7: ( 7 * ($column + $gutter) - $gutter) / $em; // 1320px
+    $cols8: ( 8 * ($column + $gutter) - $gutter) / $em; // 1510px
+    $cols9: ( 9 * ($column + $gutter) - $gutter) / $em; // 1700px
+
+    @mixin width ($cols:1) {
+      width: ($cols * ($column + $gutter) - $gutter) / $em;
+    }
+
+    @mixin maxWidth ($cols:1) {
+      max-width: ($cols * ($column + $gutter) - $gutter) / $em;
+    }
 
   // Colors
-  $black: #110c0f;
-  $white: #f5f5f5;
-  $pink-light: #f172ae;
-  $pink-dark: #ec0075;
+    $black: #110c0f;
+    $white: #f5f5f5;
+    $pink-light: #f172ae;
+    $pink-dark: #ec0075;
 
   // Grid Background;
-  $grid-bg: 'http://s3.amazonaws.com/jerktest/static/grid-bg.gif';
+    $grid-bg: 'http://s3.amazonaws.com/jerktest/static/grid-bg.gif';
 
 //---------------------------------------------------------------------------------------------
 //  TYPOGRAPHY
@@ -211,46 +219,47 @@
       }
     }
   }
-.contact{
-  width: $cols3;
-  margin: 0 auto;
-  @include clearfix;
-  #contact-logo{ 
-    float: left;
+  .contact{
+    width: $cols3;
+    margin: 0 auto;
+    @include clearfix;
+    #contact-logo{ 
+      float: left;
+    }
+    #contact-text{ 
+      font-size: 1em;
+      color: #ddd;
+      margin-top: 8em;
+    }
+    #contact-email{
+      position: relative;
+      left: 8em;
+      font-size: 1.6em;
+      color: white;
+      display: block;
+      &:active  { color: #cccccc; }
+      &:visited { color: #cccccc; }
+      &:hover   { color: #f24b95; }
+    }
   }
-  #contact-text{ 
-    font-size: 1em;
-    color: #ddd;
-    margin-top: 8em;
-  }
-  #contact-email{
-    position: relative;
-    left: 8em;
-    font-size: 1.6em;
-    color: white;
-    display: block;
-    &:active  { color: #cccccc; }
-    &:visited { color: #cccccc; }
-    &:hover   { color: #f24b95; }
-  }
-}
 
-a.instagram, a.facebook{ 
-  display: block;
-  float: right;
-  margin-top: 2em;
-  margin-left: $gutter / $em;
-  height: 45px; width: 45px;
-  text-indent: -9000px;
-}
-a.facebook{  background: url('/assets/contact/facebook.png'); left: 136px;}
-a.instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
+  a.instagram, a.facebook{ 
+    display: block;
+    float: right;
+    margin-top: 2em;
+    margin-left: $gutter / $em;
+    height: 45px; width: 45px;
+    text-indent: -9000px;
+  }
+  a.facebook{  background: url('/assets/contact/facebook.png'); left: 136px;}
+  a.instagram{ background: url('/assets/contact/instagram.png'); left: 80px;}
 
 //---------------------------------------------------------------------------------------------
 //  MEDIA QUERIES
 
-    @for $i from 3 through 9 {
-      @media screen and (min-width: ($i * ($column + $gutter) - $gutter) / $em) { 
-        .container{  width:  ($i * ($column + $gutter) - $gutter) / $em; }
-      }
+  @for $i from 3 through 9 {
+    @media screen and (min-width: ($i * ($column + $gutter) - $gutter) / $em) { 
+      .container{  width:  ($i * ($column + $gutter) - $gutter) / $em; }
+      article.post img{ @include maxWidth(2); }
     }
+  }
