@@ -260,6 +260,6 @@
   @for $i from 3 through 9 {
     @media screen and (min-width: ($i * ($column + $gutter) - $gutter) / $em) { 
       .container{  width:  ($i * ($column + $gutter) - $gutter) / $em; }
-      article.post img{ @include maxWidth(2); }
+      article.post img{ max-width: ($i * ($column + $gutter) - $gutter) / $em;  }
     }
   }
