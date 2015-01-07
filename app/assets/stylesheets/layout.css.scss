@@ -259,9 +259,9 @@
 
   @for $i from 2 through 9 {
     @media screen and (min-width: ($i * ($column + $gutter) - $gutter) / $em) { 
-      .container::before{
-        content: 'cols' + $i;
-      }
+      // .container::before{
+      //   content: 'cols' + $i;
+      // }
       .container{  width:  ($i * ($column + $gutter) - $gutter) / $em; }
       article.post img{ max-width: ($i * ($column + $gutter) - $gutter) / $em;  }
     }
