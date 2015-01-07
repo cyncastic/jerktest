@@ -257,7 +257,7 @@
 //---------------------------------------------------------------------------------------------
 //  MEDIA QUERIES
 
-  @for $i from 2 through 9 {
+  @for $i from 1 through 9 {
     @media screen and (min-width: ($i * ($column + $gutter) - $gutter) / $em) { 
       .container{  width:  ($i * ($column + $gutter) - $gutter) / $em; }
       article.post img{ max-width: ($i * ($column + $gutter) - $gutter) / $em;  }
