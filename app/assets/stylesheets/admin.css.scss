@@ -1,36 +1,5 @@
 nav.admin{
-  display: block;
-  width: $cols1;
-  position: fixed; 
-  top: 3em; 
-  left: -1 * $cols1 + 2*$gutter/$em;
 
-  box-shadow: 0  0 40px #000;
-
-  background: url('/assets/arrow.png') #ddd no-repeat center right;
-  border: 3px darken($admin, 10) solid;
-  border-left: none;
-  border-bottom-right-radius: 3em;
-  border-top-right-radius: 1em;
-  
-  transition: left 0.33s ease-in-out;
-
-  &:hover{ left: 0; }
-
-  ul{
-    margin-left: $gutter / $em;
-    li{
-      color: black;
-      a{
-        color: $admin;
-        text-decoration: none;
-        transition: color 0.3s ease-out;
-        &:hover{
-          color: darken($admin, 10);
-        }
-      }
-    }
-  }
 }
 
 
@@ -198,3 +167,61 @@ ul#categoryselectlist{
   overflow:hidden;
   border: 3px solid rgba(0,0,0,.5);
 }
+
+
+//---------------------------------------------------------------------------------------------
+//  MEDIA QUERIES
+  @media screen and (max-width: (4 * ($column + $gutter) - $gutter) / $em) { 
+    nav.admin{
+      @include clearfix;
+      margin-top: 5em;
+      background: rgba(0,0,0,.85); z-index: 1000;
+      ul{
+        display: block;
+        .navHome{display: none; }
+        li{
+          float: left; 
+          margin-right: 1em;
+          a{ color: $blue; }
+          .navTitle{ display: block; color: white;}
+          ul{ height: 3em; 
+            li{ float: none;}
+          }
+        }
+      }
+    }
+  }
+  @for $i from 4 through 9 {
+    @media screen and (min-width: ($i * ($column + $gutter) - $gutter) / $em) { 
+      nav.admin{
+        z-index: 1000;
+        position: fixed; 
+        top: 3em; 
+        left: -1 * $cols1 + 2*$gutter/$em;
+        transition: left 0.33s ease-in-out;
+        width: $cols1;
+        box-shadow: 0  0 40px #000;
+        background: url('/assets/arrow.png') #ddd no-repeat center right;
+        border: 3px darken($admin, 10) solid;
+        border-left: none;
+        border-bottom-right-radius: 3em;
+        border-top-right-radius: 1em;
+        &:hover{ left: 0;   display: block;
+        ul{
+          margin-left: $gutter / $em;
+          li{
+            color: black;
+            a{
+              color: $admin;
+              text-decoration: none;
+              transition: color 0.3s ease-out;
+              &:hover{
+                color: darken($admin, 10);
+              }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
