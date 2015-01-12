@@ -24,13 +24,13 @@
               %li
                 %a.navHome{ href: admin_path } Home
               %li
-                .navTitle Add Content
+                .navTitle Add
                 %ul
                   %li= link_to 'Blog Entry', new_blog_path
                   %li= link_to 'Artwork', new_artwork_path
                   %li= link_to 'Category', new_category_path
               %li 
-                .navTitle Manage Content
+                .navTitle Manage
                 %ul
                   %li= link_to 'Blog', blogs_path
                   %li= link_to 'Artworks', artworks_path
@@ -39,7 +39,7 @@
                 .navTitle Settings
                 %ul
                   %li= link_to 'Users', users_path
-              %li= link_to 'Logout', logout_path, method: :delete 
+              %li.logout= link_to 'Logout', logout_path, method: :delete 
       .content
         - if notice
           %p#notice= notice

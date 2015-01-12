@@ -119,9 +119,11 @@
     //min-width: $cols2;
   }
 
-  header.main{height: 3em;
+  header.main{
+    min-height: 3em;
     margin: 0 0 3em; 
     background: url('/assets/header.png') no-repeat;
+    @include clearfix;
     h1{ font-size: 0; margin: 0; padding: 0; }
     nav.main ul li {
       float: right; 
@@ -212,6 +214,7 @@
     }
   }
   .contact{
+    display: block;
     text-align: center;
     #contact-email{
       padding: 1em;
