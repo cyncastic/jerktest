@@ -1,0 +1,21 @@
+%section.admin
+  %h1 Menu Links
+  %table
+    %thead
+      %tr
+        %th Title
+        %th Url
+        %th Show
+        %th
+    %tbody
+      - @menu_links.each do |menu_link|
+        %tr
+          %td= menu_link.title
+          %td
+            %a{href: menu_link.url, target: '_blank'}= menu_link.url
+          %td= menu_link.show
+          %td.actions
+            = link_to 'Edit', edit_menu_link_path(menu_link)
+            = link_to 'Destroy', menu_link, method: :delete, data: { confirm: 'Are you sure?' }
+  .actions
+    = link_to 'New Menu Link', new_menu_link_path, class: 'btn'
