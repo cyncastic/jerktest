@@ -168,7 +168,9 @@ ul#categoryselectlist{
       @include clearfix;
       margin-top: 5em;
       padding: 1em;
+      border: .1em $blue solid;
       background: rgba(255,255,255,.85);
+      border-radius: 1em;
       ul{
         text-shadow: 1px 1px 0 #eee;
         display: block;
@@ -183,7 +185,6 @@ ul#categoryselectlist{
             color: black;
           }
           ul{ 
-            height: 3em; 
             li{ float: none;}
           }
         }

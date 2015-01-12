@@ -14,7 +14,8 @@
         %h1 Jerkface
         %nav.main
           %ul
-            %li= link_to 'Store', 'http://jerkface.bigcartel.com/'
+            = render '/menu_links/menulinks'
+            // %li= link_to 'Store', 'http://jerkface.bigcartel.com/'
             %li= link_to 'Contact', contact_path, class: cp(contact_path)
             = render '/categories/categories'
             %li= link_to 'Blog', root_path, class: cp(root_path)
@@ -35,6 +36,7 @@
                   %li= link_to 'Blog', blogs_path
                   %li= link_to 'Artworks', artworks_path
                   %li= link_to 'Categories', categories_path
+                  %li= link_to 'Menu Links', menu_links_path
               %li
                 .navTitle Settings
                 %ul

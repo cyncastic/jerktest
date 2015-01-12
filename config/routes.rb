@@ -1,5 +1,8 @@
 JerkTest::Application.routes.draw do
 
+  resources :menu_links
+
+
   root to: 'blogs#index'
 
   get 'admin' => 'admin#index'
