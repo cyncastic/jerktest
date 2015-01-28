@@ -147,9 +147,7 @@ ul#categoryselectlist{
   margin-top: 1em;
 }
 
-#crop-holder{
-  display: block;
-}
+#crop-holder{ display: block; }
 #crop-preview{
   position: absolute;
   top: 0;
@@ -161,67 +159,44 @@ ul#categoryselectlist{
 }
 
 
+nav.admin label.showmenu{ background: url(/assets/adminmenu.svg); height: 40px; width: 40px; }
+
+nav.admin{
+  margin-top: 1em; 
+  .navTitle{ font-size: 2em; }
+
+  > ul {
+    text-align: left; 
+    padding: 1em; 
+    border-radius: .5em; 
+    @include clearfix;
+    width: 100%;
+    background: #222;
+    > li{ display: inline-block; vertical-align: top; }
+    ul{ 
+      padding: .5em;
+      li{ padding-left: 1em; }
+    } 
+    .logout{ display: block; width: 100%; text-align: right; }
+  }
+
+  .showmenu{
+    content: '';
+    display: inline-block;
+    cursor: pointer;
+    transition: margin-top .2s linear;
+  }
+  input#showmenu ~ ul,
+  input#showadmin ~ ul { display: none; }
+  input#showmenu:checked ,
+  input#showadmin:checked {
+    ~ ul { display: block; }
+  }
+}
+
 //---------------------------------------------------------------------------------------------
 //  MEDIA QUERIES
-  @media screen and (max-width: (4 * ($column + $gutter) - $gutter) / $em) { 
-    nav.admin{
-      @include clearfix;
-      margin-top: 5em;
-      padding: 1em;
-      border: .1em $blue solid;
-      background: rgba(255,255,255,.85);
-      border-radius: 1em;
-      ul{
-        text-shadow: 1px 1px 0 #eee;
-        display: block;
-        .navHome{ display: none; }
-        .logout a{ color: red; }
-        li{
-          float: left; 
-          margin-right: 1em;
-          a{ color: $blue; }
-          .navTitle{ 
-            display: block; 
-            color: black;
-          }
-          ul{ 
-            li{ float: none;}
-          }
-        }
-      }
-    }
-  }
-  @for $i from 4 through 9 {
-    @media screen and (min-width: ($i * ($column + $gutter) - $gutter) / $em) { 
-      nav.admin{
-        z-index: 1000;
-        position: fixed; 
-        top: 3em; 
-        left: -1 * $cols1 + 2*$gutter/$em;
-        transition: left 0.33s ease-in-out;
-        width: $cols1;
-        box-shadow: 0  0 40px #000;
-        background: url('/assets/arrow.png') #ddd no-repeat center right;
-        border: 3px darken($admin, 10) solid;
-        border-left: none;
-        border-bottom-right-radius: 3em;
-        border-top-right-radius: 1em;
-        &:hover{ left: 0;   display: block;
-        ul{
-          margin-left: $gutter / $em;
-          li{
-            color: black;
-            a{
-              color: $admin;
-              text-decoration: none;
-              transition: color 0.3s ease-out;
-              &:hover{
-                color: darken($admin, 10);
-              }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+
+  @media screen and (min-width: ( ( 1 * ($column + $gutter) - $gutter) - 1 )  / $em ) { nav.admin > ul > li{ width: 100%; }}
+  @media screen and (min-width: ( ( 4 * ($column + $gutter) - $gutter) - 1 )  / $em ) { nav.admin > ul > li{ width: 49%; }}
+  @media screen and (min-width: ( ( 5 * ($column + $gutter) - $gutter) - 1 )  / $em ) { nav.admin > ul > li{ width: 33%; }}

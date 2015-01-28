@@ -13,33 +13,34 @@
       %header.main
         %h1 Jerkface
         %nav.main
+          %label.showmenu{ for: 'showmenu'}
+          %input#showmenu{ type: 'checkbox', role: 'button' }
           %ul
-            = render '/menu_links/menulinks'
-            // %li= link_to 'Store', 'http://jerkface.bigcartel.com/'
-            %li= link_to 'Contact', contact_path, class: cp(contact_path)
-            = render '/categories/categories'
             %li= link_to 'Blog', root_path, class: cp(root_path)
+            = render '/categories/categories'
+            = render '/menu_links/menulinks'
+            %li= link_to 'Contact', contact_path, class: cp(contact_path)
         - if session[:user_id]
           %nav.admin
+            %label.showmenu{ for: 'showadmin'}
+            %input#showadmin{ type: 'checkbox', role: 'button' }
             %ul
               %li
-                %a.navHome{ href: admin_path } Home
-              %li
-                .navTitle Add
                 %ul
+                  .navTitle Add
                   %li= link_to 'Blog Entry', new_blog_path
                   %li= link_to 'Artwork', new_artwork_path
                   %li= link_to 'Category', new_category_path
               %li 
-                .navTitle Manage
                 %ul
+                  .navTitle Manage
                   %li= link_to 'Blog', blogs_path
                   %li= link_to 'Artworks', artworks_path
                   %li= link_to 'Categories', categories_path
                   %li= link_to 'Menu Links', menu_links_path
               %li
-                .navTitle Settings
                 %ul
+                  .navTitle Settings
                   %li= link_to 'Users', users_path
               %li.logout= link_to 'Logout', logout_path, method: :delete 
       .content
