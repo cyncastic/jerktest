@@ -121,6 +121,7 @@
     h1{ font-size: 0; margin: 0; padding: 0; }
     text-align: right;
     input{ display: none; }
+    nav .showmenu svg{ height: 50px; width: 50px; }
     nav {
       ul{ margin: 0; }
       a {
@@ -238,10 +239,9 @@
   @media screen and (max-width: ( ( 5 * ($column + $gutter) - $gutter) - 1 )  / $em ) { 
     ::selection, ::-moz-selection { background: transparent; }
     * { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-
-    nav.main .showmenu{  background: url(/assets/menu-icon.svg); height: 30px; width: 48px; margin-top: 1em; }
+    nav.main{ padding-top: 1em; }
+    nav.main .showmenu svg{ fill: $green; }
     nav.main .showmenu{
-      content: '';
       display: inline-block;
       cursor: pointer;
       transition: margin-top .2s linear;
@@ -258,10 +258,10 @@
 
   @media screen and (min-width: (5 * ($column + $gutter) - $gutter) / $em) { 
     header.main{
-      padding: 1em 0 0; 
+      nav.main .showmenu{ display: none; }
       nav.main li  {
         @include inline-block;
-        margin-left: 1em;
+        margin: 1em 0 0 1em;
         a {
           transition: all 0.2s ease-out;
           font-size: 1.25em;
