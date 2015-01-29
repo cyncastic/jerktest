@@ -253,8 +253,8 @@
       ul { max-height: 0; overflow: hidden;  }
       input#showmenu:checked{
         ~ ul { max-height: 9em; margin-bottom: 1em; }
-        ~ .showmenu svg .iconline1{ transform: translate( 0, -6px); }
-        ~ .showmenu svg .iconline3{ transform: translate( 0,  6px); }
+        ~ .showmenu svg .iconline1{ @include transform(translateY(-6px)); }
+        ~ .showmenu svg .iconline3{ @include transform(translateY( 6px)); }
       }
     }
   }

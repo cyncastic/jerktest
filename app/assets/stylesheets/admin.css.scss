@@ -187,7 +187,7 @@ nav.admin{
 
   input#showadmin:checked {
     ~ ul{ padding: 1em; margin-bottom: 1em; }
-    ~ .showmenu svg{ transform: rotate(90deg); }
+    ~ .showmenu svg{ @include transform(rotate(90deg)); }
   }
 
 }
