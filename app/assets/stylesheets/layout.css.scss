@@ -246,11 +246,9 @@
       cursor: pointer;
       transition: margin-top .2s linear;
     }
-    input#showmenu ~ ul,
-    input#showadmin ~ ul { height: 0; overflow: hidden;   }
-    input#showmenu:checked ,
-    input#showadmin:checked {
-      ~ ul { height: auto; }
+    input#showmenu ~ ul { max-height: 0; overflow: hidden; transition: max-height .2s linear;  }
+    input#showmenu:checked{
+      ~ ul { max-height: 9em; }
     }
   }
 

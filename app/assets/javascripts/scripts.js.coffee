@@ -1,5 +1,6 @@
-# Sortable tables
+
 $ ->
+  # Sortable tables
   fixHelper = (e, ui) ->
     ui.children().each ->
       $(this).width $(this).width()
@@ -12,14 +13,12 @@ $ ->
         $.post($(this).data('update-url'), $(this).sortable('serialize'))
       helper: fixHelper
 
-# Fadeout deleted entries
-$ ->
+  # Fadeout deleted entries
   $('.delete_btn').bind 'ajax:success', ->
     $(this).closest("tr").fadeOut()
 
 
-# Set the jerkboxes
-$ ->
+  # Set the jerkboxes
   $('.jerkbox a').slimbox
     overlayOpacity: 0.9,
     captionAnimationDuration: 250,

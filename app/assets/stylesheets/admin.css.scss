@@ -162,14 +162,13 @@ ul#categoryselectlist{
 nav.admin label.showmenu svg{ fill: $pink; }
 
 nav.admin{
-  margin-top: 1em; 
+
   .navTitle{ font-size: 2em; line-height: 1.5; }
 
   > ul {
     text-align: left; 
-    padding: 1em; 
+    
     border-radius: 1em; 
-    border: .125em $pink solid;
     @include clearfix;
     background: #222;
     margin: 0 auto;
@@ -186,12 +185,16 @@ nav.admin{
     cursor: pointer;
     transition: margin-top .2s linear;
   }
-  input#showmenu ~ ul,
-  input#showadmin ~ ul { display: none; }
-  input#showmenu:checked ,
-  input#showadmin:checked {
-    ~ ul { display: block; }
+
+  input#showadmin {
+    ~ ul{ max-height: 0; overflow: hidden; padding: 0; border: .125em black solid; transition: all .2s linear; }
   }
+
+  input#showadmin:checked {
+    ~ ul{ max-height: 20em; padding: 1em; border: .125em $pink solid; }
+    ~ label.showmenu svg{ transform: rotate(120deg); fill: white; }
+  }
+
 }
 
 //---------------------------------------------------------------------------------------------
