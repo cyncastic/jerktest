@@ -186,7 +186,7 @@ nav.admin{
   > ul, .showmenu svg { transition: all .75s ease-in-out; }
 
   input#showadmin:checked {
-    ~ ul{ max-height: 20em; padding: 1em; margin-bottom: 1em; }
+    ~ ul{ padding: 1em; margin-bottom: 1em; }
     ~ .showmenu svg{ transform: rotate(90deg); }
   }
 
@@ -195,6 +195,20 @@ nav.admin{
 //---------------------------------------------------------------------------------------------
 //  MEDIA QUERIES
 
-  @media screen and (min-width: ( ( 1 * ($column + $gutter) - $gutter) - 1 )  / $em ) { nav.admin > ul > li{ width: 100%; }}
-  @media screen and (min-width: ( ( 3 * ($column + $gutter) - $gutter) - 1 )  / $em ) { nav.admin > ul > li{ width: 49%; }}
-  @media screen and (min-width: ( ( 4 * ($column + $gutter) - $gutter) - 1 )  / $em ) { nav.admin > ul > li{ width: 33%; }}
+  @media screen and (min-width: ( ( 1 * ($column + $gutter) - $gutter) - 1 )  / $em ) { 
+    nav.admin > ul > li{ width: 100%; }
+    input#showadmin:checked ~ ul{ max-height: 40em; }
+  }
+  @media screen and (min-width: ( ( 3 * ($column + $gutter) - $gutter) - 1 )  / $em ) { 
+    nav.admin > ul > li{ width: 49%; }
+    input#showadmin:checked ~ ul{ max-height: 27em; }
+  }
+  @media screen and (min-width: ( ( 4 * ($column + $gutter) - $gutter) - 1 )  / $em ) { 
+    nav.admin > ul > li{ width: 33%; }
+    input#showadmin:checked ~ ul{ max-height: 20em; }
+  }
+
+
+
+
+
