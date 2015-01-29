@@ -159,40 +159,35 @@ ul#categoryselectlist{
 }
 
 
-nav.admin label.showmenu svg{ fill: $pink; }
 
 nav.admin{
 
-  .navTitle{ font-size: 2em; line-height: 1.5; }
-
   > ul {
-    text-align: left; 
-    
-    border-radius: 1em; 
     @include clearfix;
+    text-align: left; 
+    border-radius: 1em; 
     background: #222;
-    margin: 0 auto;
+    max-height: 0;
+    overflow: hidden;
     > li{ display: inline-block; vertical-align: top; }
     ul{ 
       padding: .5em;
-      li{ padding-left: 1em; border-left: 2px black solid; }
+      .navTitle{ font-size: 2em; line-height: 1.5; }
+      li{ padding-left: 1em; }
     } 
     .logout{ display: block; width: 100%; text-align: right; }
   }
 
-  .showmenu{
-    display: inline-block;
+  .showmenu svg{
+    fill: $pink;
     cursor: pointer;
-    transition: margin-top .2s linear;
   }
-
-  input#showadmin {
-    ~ ul{ max-height: 0; overflow: hidden; padding: 0; border: .125em black solid; transition: all .2s linear; }
-  }
+  
+  > ul, .showmenu svg { transition: all .75s ease-in-out; }
 
   input#showadmin:checked {
-    ~ ul{ max-height: 20em; padding: 1em; border: .125em $pink solid; }
-    ~ label.showmenu svg{ transform: rotate(120deg); fill: white; }
+    ~ ul{ max-height: 20em; padding: 1em; margin-bottom: 1em; }
+    ~ .showmenu svg{ transform: rotate(90deg); }
   }
 
 }

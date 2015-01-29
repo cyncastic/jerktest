@@ -13,12 +13,12 @@
       %header.main
         %h1 Jerkface
         %nav.main
+          %input#showmenu{ type: 'checkbox', role: 'button' }
           %label.showmenu{ for: 'showmenu'}
             %svg{ xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 64 64' }
-              %rect{ x: '0', y: '12', width: '64', height: '8' }
-              %rect{ x: '0', y: '30', width: '64', height: '8' }
-              %rect{ x: '0', y: '48', width: '64', height: '8' }
-          %input#showmenu{ type: 'checkbox', role: 'button' }
+              %rect.iconline1{ x: '0', y: '12', width: '64', height: '8' }
+              %rect.iconline2{ x: '0', y: '30', width: '64', height: '8' }
+              %rect.iconline3{ x: '0', y: '48', width: '64', height: '8' }
           %ul
             %li= link_to 'Blog', root_path, class: cp(root_path)
             = render '/categories/categories'
@@ -26,10 +26,10 @@
             %li= link_to 'Contact', contact_path, class: cp(contact_path)
         - if session[:user_id]
           %nav.admin
+            %input#showadmin{ type: 'checkbox', role: 'button' }
             %label.showmenu{ for: 'showadmin'}
               %svg{ xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 200 200' }
                 %path{ d: 'M166.365,76.239c-2.889-8.056-7.262-15.598-12.958-22.217l13.714-23.962l-40.81-23.357l-13.714,23.962 c-8.597-1.561-17.311-1.509-25.72,0.08L72.993,6.9L32.356,30.572L46.24,54.417c-2.743,3.232-5.263,6.723-7.453,10.549 c-2.184,3.816-3.918,7.757-5.321,11.769L5.874,76.841l0.173,47.029l27.598-0.104c2.883,8.065,7.253,15.592,12.953,22.215 l-13.714,23.961l40.81,23.357l13.714-23.962c8.592,1.558,17.305,1.519,25.71-0.086l13.889,23.849l40.637-23.671l-13.885-23.833 c2.743-3.246,5.274-6.743,7.458-10.559c2.19-3.826,3.918-7.771,5.326-11.779l27.582-0.099l-0.173-47.029L166.365,76.239z M141.081,123.512c-12.985,22.688-41.905,30.554-64.593,17.569S45.934,99.176,58.919,76.488s41.905-30.554,64.593-17.569 S154.066,100.824,141.081,123.512z' }
-            %input#showadmin{ type: 'checkbox', role: 'button' }
             %ul
               %li
                 %ul
