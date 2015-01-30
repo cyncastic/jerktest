@@ -183,7 +183,7 @@ nav.admin{
     cursor: pointer;
   }
   
-  > ul, .showmenu svg { transition: all .75s ease-in-out; }
+  > ul, .showmenu svg { transition: all .75s cubic-bezier(0.680, -0.550, 0.265, 1.550); }
 
   input#showadmin:checked {
     ~ ul{ padding: 1em; margin-bottom: 1em; }

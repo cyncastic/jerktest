@@ -245,11 +245,10 @@
       .showmenu{
         display: inline-block;
         cursor: pointer;
-        transition: margin-top .2s linear;
         svg{ fill: $green; }
       } 
 
-      ul, .showmenu svg .iconline1, .showmenu svg .iconline3 { transition: all .33s ease-in-out; }
+      ul, .showmenu svg .iconline1, .showmenu svg .iconline3 { transition: all .33s cubic-bezier(0.680, -0.550, 0.265, 1.550); }
       ul { max-height: 0; overflow: hidden;  }
       input#showmenu:checked{
         ~ ul { max-height: 9em; margin-bottom: 1em; }
