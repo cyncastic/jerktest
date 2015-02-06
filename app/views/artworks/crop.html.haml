@@ -1,14 +1,16 @@
 %section.admin
   %h1 create thumbnail
 
-  .crop-holder
-    #cropbox= image_tag @artwork.img_url_url(:large)
-    #crop-preview{ style: 'width:180px; height:180px; overflow:hidden' }
-      #preview= image_tag @artwork.img_url_url(:large)
 
   = form_for @artwork do |f|
     - %w[x y w h].each do |attribute|
-      = f.hidden_field 'crop_#{ attribute }'
+      = f.hidden_field 'crop_' + attribute
 
     .actions
       = f.submit 'Crop'
+
+  %br
+  
+  #cropbox= image_tag @artwork.img_url_url(:large)
+  / #crop-preview{ style: 'width:180px; height:180px; overflow:hidden' }
+  /   #preview= image_tag @artwork.img_url_url(:large)

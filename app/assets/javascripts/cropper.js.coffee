@@ -1,4 +1,4 @@
-$ ->
+jQuery ->
   new AvatarCropper()
 
 class AvatarCropper
@@ -14,11 +14,11 @@ class AvatarCropper
     $('#artwork_crop_y').val(coords.y)
     $('#artwork_crop_w').val(coords.w)
     $('#artwork_crop_h').val(coords.h)
-    @updatePreview(coords)
+    # @updatePreview(coords)
 
-  updatePreview: (coords) =>
-    $('#preview').css
-      width: Math.round(180/coords.w * $('#cropbox').width()) + 'px'
-      height: Math.round(180/coords.h * $('#cropbox').height()) + 'px'
-      marginLeft: '-' + Math.round(180/coords.w * coords.x) + 'px'
-      marginTop: '-' + Math.round(180/coords.h * coords.y) + 'px'
+  # updatePreview: (coords) =>
+  #   $('#preview').css
+  #     width: Math.round(180/coords.w * $('#cropbox').width()) + 'px'
+  #     height: Math.round(180/coords.h * $('#cropbox').height()) + 'px'
+  #     marginLeft: '-' + Math.round(180/coords.w * coords.x) + 'px'
+  #     marginTop: '-' + Math.round(180/coords.h * coords.y) + 'px'

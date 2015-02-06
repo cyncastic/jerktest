@@ -22,7 +22,7 @@ gem 'will_paginate', '~> 3.0'
 
 gem 'carrierwave'
 gem 'rmagick', '2.13.2'
-gem 'fog', '~> 1.10.1'
+gem 'fog', '~> 1.10.1' 
 
 group :development, :test do
   gem 'sqlite3'
