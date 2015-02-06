@@ -1,6 +1,6 @@
 jQuery ->
   initCrop = -> new AvatarCropper()
-  setTimeout(initCrop,100)
+  setTimeout(initCrop,1000)
 
 class AvatarCropper
   constructor: ->
