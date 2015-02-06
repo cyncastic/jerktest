@@ -1,5 +1,6 @@
 jQuery ->
-  new AvatarCropper()
+  initCrop = -> new AvatarCropper()
+  setTimeout(initCrop,100)
 
 class AvatarCropper
   constructor: ->
@@ -8,6 +9,7 @@ class AvatarCropper
       setSelect: [0, 0, 600, 600]
       onSelect: @update
       onChange: @update
+    console.log('adsf')
   
   update: (coords) =>
     $('#artwork_crop_x').val(coords.x)
