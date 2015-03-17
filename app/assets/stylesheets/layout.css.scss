@@ -226,11 +226,11 @@
 
   @for $i from 2 through 9 {
     @media screen and (min-width: ($i * ($column + $gutter) - $gutter) / $em) { 
-      // .container::before{
-      //   content: 'cols' + $i;
-      //   position: fixed;
-      //   bottom: 0; right: 1em;
-      // }
+      .container::before{
+        content: 'cols' + $i;
+        position: fixed;
+        bottom: 0; right: 1em;
+      }
       .container{  width:  ($i * ($column + $gutter) - $gutter) / $em; }
       article.post img{ max-width: ($i * ($column + $gutter) - $gutter) / $em;  }
     }

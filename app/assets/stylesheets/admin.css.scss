@@ -1,30 +1,45 @@
 section.admin{
+  
+  font-size: 1.5em;
 
   @include clearfix;
   position: relative;
+
   h1{
     font-size: 2em;
     line-height: 1.5em;
-    padding-left: .25em;
     margin-bottom: .5em;
-    background: #111;
-    color: #eee;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
   }
   h2{
     padding-left: 1em;
   }
-  ul{
-    padding-left: 3em;
+  ul{ padding-left: 3em; }
+  
+  .field{
+    display: flex;
+    margin-bottom: .5em;
+    input{
+      //width: 100%;
+    }
   }
-  label{ 
-    @include inline-block;
+  .actions{
     text-align: right;
-    text-indent: ($gutter / $em) * -1; 
-    width: $cols1;
-    vertical-align: top;
+    input{
+      border: none;
+      background-color: $blue;
+      color: white;
+      font-size: 1em;
+      padding-left: .5em;
+    }
   }
+
+  label{ 
+    text-align: right;
+    margin-right: .5em;
+    width: $cols1 * .5;
+  }
+
+
   table{
     font-size: 1em;
     width: 100%;
@@ -81,6 +96,7 @@ section.admin{
       margin-left: -.5em;
     }
   }
+
   .field_with_errors {
     padding: 2px;
     background-color: red;
@@ -138,12 +154,10 @@ ul#categoryselectlist{
   }
 }
 
-#notice {
-  color: green;
-  background: #fefefe;
-  padding: .5em;
-  border: 1px black solid;
-  margin-top: 1em;
+.alert {
+  color: $pink;
+  margin-bottom: 1em;
+  padding-left: $cols1 * .5;
 }
 
 // .crop-holder{ }
